@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="这是一个测试博客">
+<meta name="description" content="异或 相异为1，相同为0不同容量的桶装出指定容量的水的问题对小容积进行成倍对大容积取模，然后得到一些数，这些数代表肯定能凑出来的容积。然后这些容积组合出来的也是可以倒出来的容积：5%7 = 5；10%7 = 3； 15%7 = 1；20%7 = 6；25%7 = 4； 30%7 = 2；3 5%7 = 0；40%7 = 5；…… 又3+5 = 8；5+6 = 11；叶子结点个数有N1个度为1的节点">
 <meta name="keywords" content="AI,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔试">
 <meta property="og:url" content="http://yoursite.com/2018/10/27/笔试/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="这是一个测试博客">
+<meta property="og:description" content="异或 相异为1，相同为0不同容量的桶装出指定容量的水的问题对小容积进行成倍对大容积取模，然后得到一些数，这些数代表肯定能凑出来的容积。然后这些容积组合出来的也是可以倒出来的容积：5%7 = 5；10%7 = 3； 15%7 = 1；20%7 = 6；25%7 = 4； 30%7 = 2；3 5%7 = 0；40%7 = 5；…… 又3+5 = 8；5+6 = 11；叶子结点个数有N1个度为1的节点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-27T15:35:55.654Z">
+<meta property="og:updated_time" content="2018-10-27T15:44:16.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔试">
-<meta name="twitter:description" content="这是一个测试博客">
+<meta name="twitter:description" content="异或 相异为1，相同为0不同容量的桶装出指定容量的水的问题对小容积进行成倍对大容积取模，然后得到一些数，这些数代表肯定能凑出来的容积。然后这些容积组合出来的也是可以倒出来的容积：5%7 = 5；10%7 = 3； 15%7 = 1；20%7 = 6；25%7 = 4； 30%7 = 2；3 5%7 = 0；40%7 = 5；…… 又3+5 = 8；5+6 = 11；叶子结点个数有N1个度为1的节点">
 
 
 
@@ -329,6 +329,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔试/" itemprop="url" rel="index">
+                    <span itemprop="name">笔试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -377,7 +399,8 @@
       
 
       
-        
+        <p></p><h1>异或</h1><p></p>
+<div>相异为1，相同为0</div><br><h1>不同容量的桶装出指定容量的水的问题</h1><br><div>对小容积进行成倍对大容积取模，然后得到一些数，这些数代表肯定能凑出来的容积。然后这些容积组合出来的也是可以倒出来的容积：<br>5%7 = 5；10%7 = 3； 15%7 = 1；20%7 = 6；25%7 = 4； 30%7 = 2；3 5%7 = 0；40%7 = 5；……<br> 又3+5 = 8；5+6 = 11；<br></div><br><h1>叶子结点个数</h1><br><div>有N1个度为1的节点，N2个度为2的节点…<br>节点数=分支数+1<br>1）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1<br>总节点数：N=N0+N1+N2+…+Nm<br>总分支数：N=N1+2N2+3N3+mNm+1<br>N0=N2+2N3+3N4+…+(m-1)Nm+1</div>
       
     </div>
     
@@ -468,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -497,7 +529,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -553,6 +585,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">异或</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">不同容量的桶装出指定容量的水的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">叶子结点个数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
