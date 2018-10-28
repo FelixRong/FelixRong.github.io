@@ -115,20 +115,18 @@
 
 
 
-<meta name="description" content="机器学习入门机器学习例子机器学习根本不接受你输入的指令，相反，它接受你输入的数据。也就是说，机器学习是一种让计算机利用数据而不是指令来进行工作的方法。机器学习过程（例子） 我把过往跟小Y相约的经历在脑海中重现一下，看看跟他相约的次数中，迟到占了多大的比例。而我利用这来预测他这次迟到的可能性。如果这个值超出了我心里的某个界限，那我选择等一会再出发。假设">
+<meta name="description" content="损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数">
 <meta name="keywords" content="AI,Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习基础02">
+<meta property="og:title" content="机器学习02">
 <meta property="og:url" content="http://yoursite.com/2018/10/28/机器学习基础02/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="机器学习入门机器学习例子机器学习根本不接受你输入的指令，相反，它接受你输入的数据。也就是说，机器学习是一种让计算机利用数据而不是指令来进行工作的方法。机器学习过程（例子） 我把过往跟小Y相约的经历在脑海中重现一下，看看跟他相约的次数中，迟到占了多大的比例。而我利用这来预测他这次迟到的可能性。如果这个值超出了我心里的某个界限，那我选择等一会再出发。假设">
+<meta property="og:description" content="损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/jiqileibi.png">
-<meta property="og:updated_time" content="2018-10-28T07:59:38.104Z">
+<meta property="og:updated_time" content="2018-10-28T12:27:01.420Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习基础02">
-<meta name="twitter:description" content="机器学习入门机器学习例子机器学习根本不接受你输入的指令，相反，它接受你输入的数据。也就是说，机器学习是一种让计算机利用数据而不是指令来进行工作的方法。机器学习过程（例子） 我把过往跟小Y相约的经历在脑海中重现一下，看看跟他相约的次数中，迟到占了多大的比例。而我利用这来预测他这次迟到的可能性。如果这个值超出了我心里的某个界限，那我选择等一会再出发。假设">
-<meta name="twitter:image" content="http://yoursite.com/images/jiqileibi.png">
+<meta name="twitter:title" content="机器学习02">
+<meta name="twitter:description" content="损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数">
 
 
 
@@ -164,7 +162,7 @@
 
 
 
-  <title>机器学习基础02 | 张凡荣</title>
+  <title>机器学习02 | 张凡荣</title>
   
 
 
@@ -296,7 +294,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FelixRong">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tx.jpg">
+      <meta itemprop="image" content="/images/next/tx.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -308,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习基础02</h1>
+          <h1 class="post-title" itemprop="name headline">机器学习02</h1>
         
 
         <div class="post-meta">
@@ -370,7 +368,7 @@
 
           
           
-             <span id="/2018/10/28/机器学习基础02/" class="leancloud_visitors" data-flag-title="机器学习基础02">
+             <span id="/2018/10/28/机器学习基础02/" class="leancloud_visitors" data-flag-title="机器学习02">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -401,25 +399,15 @@
       
 
       
-        <h2 id="机器学习入门"><a href="#机器学习入门" class="headerlink" title="机器学习入门"></a>机器学习入门</h2><h3 id="机器学习例子"><a href="#机器学习例子" class="headerlink" title="机器学习例子"></a>机器学习例子</h3><p>机器学习根本不接受你输入的指令，相反，它接受你输入的数据。也就是说，机器学习是一种让计算机利用数据而不是指令来进行工作的方法。<br>机器学习过程（例子）</p>
-<p style="text-indent: 2em;margin: 0px;padding: 0px">我把过往跟小Y相约的经历在脑海中重现一下，看看跟他相约的次数中，迟到占了多大的比例。而我利用这来预测他这次迟到的可能性。如果这个值超出了我心里的某个界限，那我选择等一会再出发。假设<a id="more"></a>我跟小Y约过5次，他迟到的次数是1次，那么他按时到的比例为80%，我心中的阈值为70%，我认为这次小Y应该不会迟到，因此我按时出门。如果小Y在5次迟到的次数中占了4次，也就是他按时到达的比例为20%，由于这个值低于我的阈值，因此我选择推迟出门的时间。这个方法从它的利用层面来看，又称为经验法。在经验法的思考过程中，我事实上利用了以往所有相约的数据。因此也可以称之为依据数据做的判断。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">依据数据所做的判断跟机器学习的思想根本上是一致的。机器学习方法是计算机利用已有的数据(经验)，得出了某种模型(迟到的规律)，并利用此模型预测未来(是否迟到)的一种方法。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">如果我把这些建立模型的过程交给电脑。比如把所有的自变量和因变量输入，然后让计算机帮我生成一个模型，同时让计算机根据我当前的情况，给出我是否需要迟出门，需要迟几分钟的建议。那么计算机执行这些辅助决策的过程就是机器学习的过程。</p><br><p>类似于决策树，决策树只能预测离散值。</p>
+        <h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p style="text-indent: 2em;margin: 0px;padding: 0px">损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数(loss function)，或者叫代价函数(cost function)。损失函数越小，就代表模型拟合的越好。</p>
 
-<h3 id="机器学习与人类思考的类比"><a href="#机器学习与人类思考的类比" class="headerlink" title="机器学习与人类思考的类比"></a>机器学习与人类思考的类比</h3><p><img src="/images/jiqileibi.png" alt="机器与人类的类比"><br>机器学习中的“训练”与“预测”过程可以对应到人类的“归纳”和“推测”过程。</p>
-<h3 id="机器学习相关学科"><a href="#机器学习相关学科" class="headerlink" title="机器学习相关学科"></a>机器学习相关学科</h3><p><span style="font-weight: bold;color: red">模式识别</span><br>模式识别=机器学习。两者的主要区别在于前者是从工业界发展起来的概念，后者则主要源自计算机学科。<br><span style="font-weight: bold;color: red">数据挖掘</span><br>数据挖掘=机器学习+数据库。数据挖掘仅仅是一种思考方式，告诉我们应该尝试从数据中挖掘出知识，但不是每个数据都能挖掘出金子的。<br><span style="font-weight: bold;color: red">统计学习</span><br>统计学习近似等于机器学习。统计学习是个与机器学习高度重叠的学科。因为机器学习中的大多数方法来自统计学，甚至可以认为，统计学的发展促进机器学习的繁荣昌盛。例如著名的支持向量机算法，就是源自统计学科。这个分别在于：统计学习者重点关注的是统计模型的发展与优化，偏数学，而机器学习者更关注的是能够解决问题，偏实践，因此机器学习研究者会重点研究学习算法在计算机上执行的效率与准确性的提升。<br><span style="font-weight: bold;color: red">计算机视觉</span><br>计算机视觉=图像处理+机器学习。图像处理技术用于将图像处理为适合进入机器学习模型中的输入，机器学习则负责从图像中识别出相关的模式。<br><span style="font-weight: bold;color: red">语音识别</span><br>语音识别=语音处理+机器学习。语音识别就是音频处理技术与机器学习的结合。语音识别技术一般不会单独使用，一般会结合自然语言处理的相关技术。目前的相关应用有苹果的语音助手siri等。<br><span style="font-weight: bold;color: red">自然语言处理    </span></p>
-<p style="text-indent: 2em;margin: 0px;padding: 0px">自然语言处理=文本处理+机器学习。自然语言处理技术主要是让机器理解人类的语言的一门领域。在自然语言处理技术中，大量使用了编译原理相关的技术，例如词法分析，语法分析等等，除此之外，在理解这个层面，则使用了语义理解，机器学习等技术。</p>
+<h2 id="决策树（Decision-Tree）"><a href="#决策树（Decision-Tree）" class="headerlink" title="决策树（Decision Tree）"></a>决策树（Decision Tree）</h2><p>基本的分类与回归方法</p>
+<p style="text-indent: 2em;margin: 0px;padding: 0px">在分类问题中，表示基于特征对实例进行分类的过程，可以认为是if-then的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">决策树通常有三个步骤：特征选择、决策树的生成、决策树的修剪。</p>
 
-<h3 id="机器学习方法"><a href="#机器学习方法" class="headerlink" title="机器学习方法"></a>机器学习方法</h3><h4 id="回归算法"><a href="#回归算法" class="headerlink" title="回归算法"></a>回归算法</h4><p>回归算法有两个重要的子类：即线性回归和逻辑回归。</p>
-<p style="text-indent: 2em;margin: 0px;padding: 0px">线性回归处理的是数值问题，也就是最后预测出的结果是数字，例如房价。而逻辑回归属于分类算法，也就是说，逻辑回归预测结果是离散的分类，例如判断这封邮件是否是垃圾邮件，以及用户是否会点击此广告等等。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">实现方面的话，逻辑回归只是对对线性回归的计算结果加上了一个Sigmoid函数，将数值结果转化为了0到1之间的概率。</p>
+<h2 id="随机森林（Random-Forest）"><a href="#随机森林（Random-Forest）" class="headerlink" title="随机森林（Random Forest）"></a>随机森林（Random Forest）</h2><p>随机森林特点：<br>    在当前所有算法中，具有极好的准确率<br>    能够有效地运行在大数据集上<br>    能够处理具有高维特征的输入样本，而且不需要降维<br>    能够评估各个特征在分类问题上的重要性<br>    在生成过程中，能够获取到内部生成误差的一种无偏估计<br>    对于缺省值问题也能够获得很好得结果</p>
+<p style="text-indent: 2em;margin: 0px;padding: 0px">随机森林就是通过集成学习的思想将多棵树集成的一种算法，它的基本单元是决策树，而它的本质属于机器学习的一大分支——集成学习（Ensemble Learning）方法。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">其实从直观角度来解释，每棵决策树都是一个分类器（假设现在针对的是分类问题），那么对于一个输入样本，N棵树会有N个分类结果。而随机森林集成了所有的分类投票结果，将投票次数最多的类别指定为最终的输出，这就是一种最简单的 Bagging 思想。</p>
 
-<h4 id="SVM-支持向量机"><a href="#SVM-支持向量机" class="headerlink" title="SVM(支持向量机)"></a>SVM(支持向量机)</h4><p>支持向量机算法是诞生于统计学习界，同时在机器学习界大放光彩的经典算法。</p>
-<p style="text-indent: 2em;margin: 0px;padding: 0px">支持向量机算法从某种意义上来说是逻辑回归算法的强化：通过给予逻辑回归算法更严格的优化条件，支持向量机算法可以获得比逻辑回归更好的分类界线。但是如果没有某类函数技术（主要用于非线性支持向量机），则支持向量机算法最多算是一种更好的线性分类技术。最典型的特征就是可以将低维的空间映射到高维的空间。</p>
-
-<h5 id="核技巧"><a href="#核技巧" class="headerlink" title="核技巧"></a>核技巧</h5><p style="text-indent: 2em;margin: 0px;padding: 0px">用线性分类分类方法求解非线性分类问题分为两步：首先使用一个变换将原空间的数据映射到新空间；然后在新空间里用线性分类学习方法从训练数据中学习分类模型。核技巧就是属于这样的方法。</p>
-
-<h4 id="聚类算法"><a href="#聚类算法" class="headerlink" title="聚类算法"></a>聚类算法</h4><p>无监督算法中最典型的代表就是聚类算法。<br>简单来说，聚类算法就是计算种群中的距离，根据距离的远近将数据划分为多个族群。</p>
-<h4 id="降维算法"><a href="#降维算法" class="headerlink" title="降维算法"></a>降维算法</h4><p style="text-indent: 2em;margin: 0px;padding: 0px">降维算法也是一种无监督学习算法，其主要特征是将数据从高维降低到低维层次。在这里，维度其实表示的是数据的特征量的大小。</p><br>例如，房价包含房子的长、宽、面积与房间数量四个特征，也就是维度为4维的数据。可以看出来，长与宽事实上与面积表示的信息重叠了，例如面积=长 × 宽。通过降维算法我们就可以去除冗余信息，将特征减少为面积与房间数量两个特征，即从4维的数据压缩到2维。<br>于是我们将数据从高维降低到低维，不仅利于表示，同时在计算上也能带来加速。<br><p style="text-indent: 2em;margin: 0px;padding: 0px">降维算法的另一个好处是数据的可视化，例如将5维的数据压缩至2维，然后可以用二维平面来可视。降维算法的主要代表是PCA算法(即主成分分析算法)。</p>
-
-<h4 id="机器学习的子类—深度学习"><a href="#机器学习的子类—深度学习" class="headerlink" title="机器学习的子类—深度学习"></a>机器学习的子类—深度学习</h4><p></p><p style="text-indent: 2em;margin: 0px;padding: 0px">其理念非常简单，就是传统的神经网络发展到了多隐藏层的情况。具有多个隐藏层的神经网络被称为深度神经网络，基于深度神经网络的学习研究称之为深度学习。</p><br>2006年，Geoffrey Hinton在科学杂志《Science》上发表了一篇文章，论证了两个观点：<br>1.多隐层的神经网络具有优异的特征学习能力，学习得到的特征对数据有更本质的刻画，从而有利于可视化或分类；<br>2.深度神经网络在训练上的难度，可以通过“逐层初始化” 来有效克服。<p></p>
+<h3 id="信息、熵以及信息增益的概念"><a href="#信息、熵以及信息增益的概念" class="headerlink" title="信息、熵以及信息增益的概念"></a>信息、熵以及信息增益的概念</h3><p style="text-indent: 2em;margin: 0px;padding: 0px">这三个基本概念是决策树的根本，是决策树利用特征来分类时，确定特征选取顺序的依据。</p><br>引用香农的话来说，<span style="color: red">信息是用来消除随机不确定性的东西。</span><br>某个类（Xi）的信息可定义为：<br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mi> I </mi> <mfenced> <mrow> <mi> X </mi> <mo> = </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mi> i </mi> </mrow> </msub> </mrow> </mfenced> <mo> = </mo> <mo> - </mo> <msub> <mrow> <mi> log </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mi> p </mi> <mfenced> <mrow> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mi> i </mi> </mrow> </msub> </mrow> </mfenced> </math></span><br><p style="text-indent: 2em;margin: 0px;padding: 0px">I(x)用来表示随机变量的信息，p(xi)指是当xi发生时的概率。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">一个消息可能性（概率）越小，其信息量越大。熵越大，代表该随机变量取特定值的时候具有的信息量越大。</p>
 
       
     </div>
@@ -444,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/28/机器学习基础01/" rel="next" title="机器学习基础01">
-                <i class="fa fa-chevron-left"></i> 机器学习基础01
+              <a href="/2018/10/28/机器学习基础01/" rel="next" title="机器学习01">
+                <i class="fa fa-chevron-left"></i> 机器学习01
               </a>
             
           </div>
@@ -525,7 +513,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/tx.jpg" alt="FelixRong">
+              <img class="site-author-image" itemprop="image" src="/images/next/tx.jpg" alt="FelixRong">
             
               <p class="site-author-name" itemprop="name">FelixRong</p>
               <p class="site-description motion-element" itemprop="description">这是一个测试博客</p>
@@ -615,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习入门"><span class="nav-number">1.</span> <span class="nav-text">机器学习入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习例子"><span class="nav-number">1.1.</span> <span class="nav-text">机器学习例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习与人类思考的类比"><span class="nav-number">1.2.</span> <span class="nav-text">机器学习与人类思考的类比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习相关学科"><span class="nav-number">1.3.</span> <span class="nav-text">机器学习相关学科</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习方法"><span class="nav-number">1.4.</span> <span class="nav-text">机器学习方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#回归算法"><span class="nav-number">1.4.1.</span> <span class="nav-text">回归算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVM-支持向量机"><span class="nav-number">1.4.2.</span> <span class="nav-text">SVM(支持向量机)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#核技巧"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">核技巧</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚类算法"><span class="nav-number">1.4.3.</span> <span class="nav-text">聚类算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降维算法"><span class="nav-number">1.4.4.</span> <span class="nav-text">降维算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#机器学习的子类—深度学习"><span class="nav-number">1.4.5.</span> <span class="nav-text">机器学习的子类—深度学习</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">1.</span> <span class="nav-text">损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树（Decision-Tree）"><span class="nav-number">2.</span> <span class="nav-text">决策树（Decision Tree）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林（Random-Forest）"><span class="nav-number">3.</span> <span class="nav-text">随机森林（Random Forest）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息、熵以及信息增益的概念"><span class="nav-number">3.1.</span> <span class="nav-text">信息、熵以及信息增益的概念</span></a></li></ol></li></ol></div>
             
 
           </div>
