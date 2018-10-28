@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="张凡荣">
 <meta property="og:description" content="损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-28T12:27:01.420Z">
+<meta property="og:updated_time" content="2018-10-28T12:30:13.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习02">
 <meta name="twitter:description" content="损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数">
@@ -399,10 +399,7 @@
       
 
       
-        <h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p style="text-indent: 2em;margin: 0px;padding: 0px">损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数(loss function)，或者叫代价函数(cost function)。损失函数越小，就代表模型拟合的越好。</p>
-
-<h2 id="决策树（Decision-Tree）"><a href="#决策树（Decision-Tree）" class="headerlink" title="决策树（Decision Tree）"></a>决策树（Decision Tree）</h2><p>基本的分类与回归方法</p>
-<p style="text-indent: 2em;margin: 0px;padding: 0px">在分类问题中，表示基于特征对实例进行分类的过程，可以认为是if-then的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">决策树通常有三个步骤：特征选择、决策树的生成、决策树的修剪。</p>
+        <h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p style="text-indent: 2em;margin: 0px;padding: 0px">损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数(loss function)，或者叫代价函数(cost function)。损失函数越小，就代表模型拟合的越好。</p><br><a id="more"></a><br><br>## 决策树（Decision Tree）<br>基本的分类与回归方法<br><p style="text-indent: 2em;margin: 0px;padding: 0px">在分类问题中，表示基于特征对实例进行分类的过程，可以认为是if-then的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">决策树通常有三个步骤：特征选择、决策树的生成、决策树的修剪。</p>
 
 <h2 id="随机森林（Random-Forest）"><a href="#随机森林（Random-Forest）" class="headerlink" title="随机森林（Random Forest）"></a>随机森林（Random Forest）</h2><p>随机森林特点：<br>    在当前所有算法中，具有极好的准确率<br>    能够有效地运行在大数据集上<br>    能够处理具有高维特征的输入样本，而且不需要降维<br>    能够评估各个特征在分类问题上的重要性<br>    在生成过程中，能够获取到内部生成误差的一种无偏估计<br>    对于缺省值问题也能够获得很好得结果</p>
 <p style="text-indent: 2em;margin: 0px;padding: 0px">随机森林就是通过集成学习的思想将多棵树集成的一种算法，它的基本单元是决策树，而它的本质属于机器学习的一大分支——集成学习（Ensemble Learning）方法。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">其实从直观角度来解释，每棵决策树都是一个分类器（假设现在针对的是分类问题），那么对于一个输入样本，N棵树会有N个分类结果。而随机森林集成了所有的分类投票结果，将投票次数最多的类别指定为最终的输出，这就是一种最简单的 Bagging 思想。</p>
@@ -603,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">1.</span> <span class="nav-text">损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树（Decision-Tree）"><span class="nav-number">2.</span> <span class="nav-text">决策树（Decision Tree）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林（Random-Forest）"><span class="nav-number">3.</span> <span class="nav-text">随机森林（Random Forest）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息、熵以及信息增益的概念"><span class="nav-number">3.1.</span> <span class="nav-text">信息、熵以及信息增益的概念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">1.</span> <span class="nav-text">损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林（Random-Forest）"><span class="nav-number">2.</span> <span class="nav-text">随机森林（Random Forest）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息、熵以及信息增益的概念"><span class="nav-number">2.1.</span> <span class="nav-text">信息、熵以及信息增益的概念</span></a></li></ol></li></ol></div>
             
 
           </div>
