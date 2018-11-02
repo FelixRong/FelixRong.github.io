@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<a href="https://github.com/FelixRong/FelixRong.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="c++,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="40、函数指针？1)    什么是函数指针?函数指针指向的是特殊的数据类型，函数的类型是由其返回的数据类型和其参数列表共同决定的，而函数的名称则不是其类型的一部分。一个具体函数的名字，如果后面不跟调用符号(即括号)，则该名字就是该函数的指针(注意：大部分情况下，可以这么认为，但这种说法并不很严格)。2)    函数指针的声明方法int ( pf)(const int&amp;amp;, const int">
+<meta name="keywords" content="c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++面试03">
+<meta property="og:url" content="http://yoursite.com/2018/11/02/c-面试03/index.html">
+<meta property="og:site_name" content="张凡荣">
+<meta property="og:description" content="40、函数指针？1)    什么是函数指针?函数指针指向的是特殊的数据类型，函数的类型是由其返回的数据类型和其参数列表共同决定的，而函数的名称则不是其类型的一部分。一个具体函数的名字，如果后面不跟调用符号(即括号)，则该名字就是该函数的指针(注意：大部分情况下，可以这么认为，但这种说法并不很严格)。2)    函数指针的声明方法int ( pf)(const int&amp;amp;, const int">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-02T13:36:13.843Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="c++面试03">
+<meta name="twitter:description" content="40、函数指针？1)    什么是函数指针?函数指针指向的是特殊的数据类型，函数的类型是由其返回的数据类型和其参数列表共同决定的，而函数的名称则不是其类型的一部分。一个具体函数的名字，如果后面不跟调用符号(即括号)，则该名字就是该函数的指针(注意：大部分情况下，可以这么认为，但这种说法并不很严格)。2)    函数指针的声明方法int ( pf)(const int&amp;amp;, const int">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/02/c-面试03/">
+
+
+
+
+
+  <title>c++面试03 | 张凡荣</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张凡荣</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">QQ:953418392</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/c-面试03/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FelixRong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/next/tx.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张凡荣">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">c++面试03</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T21:14:12+08:00">
+                2018-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/校园招聘/" itemprop="url" rel="index">
+                    <span itemprop="name">校园招聘</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/02/c-面试03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/11/02/c-面试03/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11/02/c-面试03/" class="leancloud_visitors" data-flag-title="c++面试03">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="40、函数指针？"><a href="#40、函数指针？" class="headerlink" title="40、函数指针？"></a>40、函数指针？</h2><p>1)    <span style="colro:red">什么是函数指针?</span><br>函数指针指向的是特殊的数据类型，函数的类型是由其返回的数据类型和其参数列表共同决定的，而函数的名称则不是其类型的一部分。<br>一个具体函数的名字，如果后面不跟调用符号(即括号)，则该名字就是该函数的指针(注意：大部分情况下，可以这么认为，但这种说法并不很严格)。<br>2)    <span style="colro:red">函数指针的声明方法</span><br>int (<em> pf)(const int&amp;, const int&amp;);<br>(1) 上面的pf就是一个函数指针，指向所有返回类型为int，并带有两个const int&amp;参数的函数。注意</em> pf两边的括号是必须的，否则上面的定义就变成了：<br>int <em> pf(const int &amp;, const int &amp;);<br>(2) 而这声明了一个函数pf，其返回类型为int </em> ， 带有两个const int&amp;参数。<br>3)    <span style="colro:red">为什么有函数指针</span><br>函数与数据项相似，函数也有地址。我们希望在同一个函数中通过使用相同的形参在不同的时间使用产生不同的效果。<br>4)    <span style="colro:red">一个函数名就是一个指针，</span>它指向函数的代码。一个函数地址是该函数的进入点，也就是调用函数的地址。函数的调用可以通过函数名，也可以通过指向函数的指针来调用。函数指针还允许将函数作为变元传递给其他函数；<br>5)    <span style="colro:red">两种方法赋值：</span><br>指针名 = 函数名；  指针名 = &amp;函数名</p>
+<h2 id="41、-说说你对c和c-的看法，c和c-的区别？"><a href="#41、-说说你对c和c-的看法，c和c-的区别？" class="headerlink" title="41、 说说你对c和c++的看法，c和c++的区别？"></a>41、 说说你对c和c++的看法，c和c++的区别？</h2><p>1)    第一点就应该想到C是面向过程的语言，而C++是面向对象的语言，一般简历上第一条都是熟悉C/C++基本语法，了解C++面向对象思想，那么，请问什么是面向对象？<br>2)    C和C++动态管理内存的方法不一样，C是使用malloc/free函数，而C++除此之外还有new/delete关键字；（关于malooc/free与new/delete的不同又可以说一大堆，最后的扩展_1部分列出十大区别）；<br>3)    接下来就不得不谈到C中的struct和C++的类，C++的类是C所没有的，但是C中的struct是可以在C++中正常使用的，并且C++对struct进行了进一步的扩展，使struct在C++中可以和class一样当做类使用，而唯一和class不同的地方在于struct的成员默认访问修饰符是public,而class默认的是private;<br>4)    C++支持函数重载，而C不支持函数重载，而C++支持重载的依仗就在于C++的名字修饰与C不同，例如在C++中函数int fun(int ,int)经过名字修饰之后变为 _ fun _ int_int , 而 C是<br>_ fun，一般是这样的，所以C++才会支持不同的参数调用不同的函数；<br>5)    C++中有引用，而C没有；这样就不得不提一下引用和指针的区别（文后扩展_2）;<br>6)    当然还有C++全部变量的默认链接属性是外链接，而C是内连接；<br>7)    C 中用const修饰的变量不可以用在定义数组时的大小，但是C++用const修饰的变量可以（如果不进行&amp;,解引用的操作的话，是存放在符号表的，不开辟内存）；<br>8)    当然还有局部变量的声明规则不同，多态，C++特有输入输出流之类的，很多，下面就不再列出来了；</p>
+<h2 id="42、-c-c-的内存分配，详细说一下栈、堆、静态存储区？"><a href="#42、-c-c-的内存分配，详细说一下栈、堆、静态存储区？" class="headerlink" title="42、 c/c++的内存分配，详细说一下栈、堆、静态存储区？"></a>42、 c/c++的内存分配，详细说一下栈、堆、静态存储区？</h2><p>1、栈区（stack）—  由编译器自动分配释放，存放函数的参数值，局部变量的值等<br>其操作方式类似于数据结构中的栈。<br>2、堆区（heap） —  一般由程序员分配释放，若程序员不释放，程序结束时可能由OS（操作系统）回收。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表。<br>3、全局区（静态区）（static）—，全局变量和静态变量的存储是放在一块的，初始化的全局变量和静态变量在一块区域，未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。程序结束后由系统释放。<br>4、文字常量区  —常量字符串就是放在这里的。程序结束后由系统释放。<br>5、程序代码区    —存放函数体的二进制代码。  </p>
+<h2 id="43、-堆与栈的区别？"><a href="#43、-堆与栈的区别？" class="headerlink" title="43、 堆与栈的区别？"></a>43、 堆与栈的区别？</h2><p>1)    管理方式：对于栈来讲，是由编译器自动管理，无需我们手工控制；对于堆来说，释放工作由程序员控制，容易产生memory leak。<br>2)    空间大小：一般来讲在32位系统下，堆内存可以达到4G的空间，从这个角度来看堆内存几乎是没有什么限制的。但是对于栈来讲，一般都是有一定的空间大小的，例如，在VC6下面，默认的栈空间大小是1M（好像是，记不清楚了）。当然，我们可以修改： 打开工程，依次操作菜单如下：Project-&gt;Setting-&gt;Link，在Category 中选中Output，然后在Reserve中设定堆栈的最大值和commit。 注意：reserve最小值为4Byte；commit是保留在虚拟内存的页文件里面，它设置的较大会使栈开辟较大的值，可能增加内存的开销和启动时间。<br>3)    碎片问题：对于堆来讲，频繁的new/delete势必会造成内存空间的不连续，从而造成大量的碎片，使程序效率降低。对于栈来讲，则不会存在这个问题，因为栈是先进后出的队列，他们是如此的一一对应，以至于永远都不可能有一个内存块从栈中间弹出，在他弹出之前，在他上面的后进的栈内容已经被弹出，详细的可以参考数据结构，这里我们就不再一一讨论了。<br>4)    生长方向：对于堆来讲，生长方向是向上的，也就是向着内存地址增加的方向；对于栈来讲，它的生长方向是向下的，是向着内存地址减小的方向增长。<br>5)    分配方式：堆都是动态分配的，没有静态分配的堆。栈有2种分配方式：静态分配和动态分配。静态分配是编译器完成的，比如局部变量的分配。动态分配由alloca函数进行分配，但是栈的动态分配和堆是不同的，它的动态分配是由编译器进行释放，无需我们手工实现。<br>6)    分配效率：栈是机器系统提供的数据结构，计算机会在底层对栈提供支持：分配专门的寄存器存放栈的地址，压栈出栈都有专门的指令执行，这就决定了栈的效率比较高。堆则是C/C++函数库提供的，它的机制是很复杂的，例如为了分配一块内存，库函数会按照一定的算法（具体的算法可以参考数据结构/操作系统）在堆内存中搜索可用的足够大小的空间，如果没有足够大小的空间（可能是由于内存碎片太多），就有可能调用系统功能去增加程序数据段的内存空间，这样就有机会分到足够大小的内存，然后进行返回。显然，堆的效率比栈要低得多。</p>
+<h2 id="44、-野指针是什么？如何检测内存泄漏？"><a href="#44、-野指针是什么？如何检测内存泄漏？" class="headerlink" title="44、 野指针是什么？如何检测内存泄漏？"></a>44、 野指针是什么？如何检测内存泄漏？</h2><p>1)    野指针：指向内存被释放的内存或者没有访问权限的内存的指针。<br>2)    “野指针”的成因主要有3种：<br>①    指针变量没有被初始化。任何指针变量刚被创建时不会自动成为NULL指针，它的缺省值是随机的，它会乱指一气。所以，指针变量在创建的同时应当被初始化，要么将指针设置为NULL，要么让它指向合法的内存。例如<br>char <em> p = NULL;<br>char </em> str = new char(100);<br>②    指针p被free或者delete之后，没有置为NULL；<br>③    指针操作超越了变量的作用范围。<br>3)    如何避免野指针：<br>①    对指针进行初始化<br>①将指针初始化为NULL。<br>char <em>   p  = NULL;<br>②用malloc分配内存<br>char </em> p = (char <em> )malloc(sizeof(char));<br>③用已有合法的可访问的内存地址对指针初始化<br>char num[ 30] = {0};<br>char </em> p = num;<br>②    指针用完后释放内存，将指针赋NULL。<br>delete(p);<br>p = NULL;</p>
+<h2 id="45、-悬空指针和野指针有什么区别？"><a href="#45、-悬空指针和野指针有什么区别？" class="headerlink" title="45、 悬空指针和野指针有什么区别？"></a>45、 悬空指针和野指针有什么区别？</h2><p>1)    野指针：野指针指，访问一个已删除或访问受限的内存区域的指针，野指针不能判断是否为NULL来避免。指针没有初始化，释放后没有置空，越界</p>
+<p>2)    悬空指针：一个指针的指向对象已被删除，那么就成了悬空指针。野指针是那些未初始化的指针。</p>
+<h2 id="46、-内存泄漏"><a href="#46、-内存泄漏" class="headerlink" title="46、 内存泄漏"></a>46、 内存泄漏</h2><p>1)    内存泄漏<br>内存泄漏是指由于疏忽或错误造成了程序未能释放掉不再使用的内存的情况。内存泄漏并非指内存在物理上消失，而是应用程序分配某段内存后，由于设计错误，失去了对该段内存的控制；<br>2)    后果<br>只发生一次小的内存泄漏可能不被注意，但泄漏大量内存的程序将会出现各种证照：性能下降到内存逐渐用完，导致另一个程序失败；<br>3)    如何排除<br>使用工具软件BoundsChecker，BoundsChecker是一个运行时错误检测工具，它主要定位程序运行时期发生的各种错误；<br>调试运行DEBUG版程序，运用以下技术：CRT(C run-time libraries)、运行时函数调用堆栈、内存泄漏时提示的内存分配序号(集成开发环境OUTPUT窗口)，综合分析内存泄漏的原因，排除内存泄漏。<br>4)    解决方法<br>智能指针。<br>5)    检查、定位内存泄漏<br>检查方法：在main函数最后面一行，加上一句_CrtDumpMemoryLeaks()。调试程序，自然关闭程序让其退出，查看输出：<br>输出这样的格式{453}normal block at 0x02432CA8,868 bytes long<br>被{}包围的453就是我们需要的内存泄漏定位值，868 bytes long就是说这个地方有868比特内存没有释放。<br>定位代码位置<br>在main函数第一行加上_CrtSetBreakAlloc(453);意思就是在申请453这块内存的位置中断。然后调试程序，程序中断了，查看调用堆栈。加上头文件#include &lt;crtdbg.h&gt;</p>
+<h2 id="47、-new和malloc的区别？"><a href="#47、-new和malloc的区别？" class="headerlink" title="47、 new和malloc的区别？"></a>47、 new和malloc的区别？</h2><p>1、    new/delete是C++关键字，需要编译器支持。malloc/free是库函数，需要头文件支持；<br>2、    使用new操作符申请内存分配时无须指定内存块的大小，编译器会根据类型信息自行计算。而malloc则需要显式地指出所需内存的尺寸。<br>3、    new操作符内存分配成功时，返回的是对象类型的指针，类型严格与对象匹配，无须进行类型转换，故new是符合类型安全性的操作符。而malloc内存分配成功则是返回void <em> ，需要通过强制类型转换将void</em> 指针转换成我们需要的类型。<br>4、    new内存分配失败时，会抛出bac_alloc异常。malloc分配内存失败时返回NULL。<br>5、    new会先调用operator new函数，申请足够的内存（通常底层使用malloc实现）。然后调用类型的构造函数，初始化成员变量，最后返回自定义类型指针。delete先调用析构函数，然后调用operator delete函数释放内存（通常底层使用free实现）。malloc/free是库函数，只能动态的申请和释放内存，无法强制要求其做自定义类型对象构造和析构工作。</p>
+<h2 id="48、-delete-p-与delete-p，allocator"><a href="#48、-delete-p-与delete-p，allocator" class="headerlink" title="48、 delete p;与delete[]p，allocator"></a>48、 delete p;与delete[]p，allocator</h2><p>1、    动态数组管理new一个数组时，[]中必须是一个整数，但是不一定是常量整数，普通数组必须是一个常量整数；<br>2、    new动态数组返回的并不是数组类型，而是一个元素类型的指针；<br>3、    delete[]时，数组中的元素按逆序的顺序进行销毁；<br>4、    new在内存分配上面有一些局限性，new的机制是将内存分配和对象构造组合在一起，同样的，delete也是将对象析构和内存释放组合在一起的。allocator将这两部分分开进行，allocator申请一部分内存，不进行初始化对象，只有当需要的时候才进行初始化操作。</p>
+<h2 id="49、-new和delete的实现原理，-delete是如何知道释放内存的大小的额？"><a href="#49、-new和delete的实现原理，-delete是如何知道释放内存的大小的额？" class="headerlink" title="49、 new和delete的实现原理， delete是如何知道释放内存的大小的额？"></a>49、 new和delete的实现原理， delete是如何知道释放内存的大小的额？</h2><p>1、    new简单类型直接调用operator new分配内存；而对于复杂结构，先调用operator new分配内存，然后在分配的内存上调用构造函数；对于简单类型，new[]计算好大小后调用operator new；对于复杂数据结构，new[]先调用operator new[]分配内存，然后在p的前四个字节写入数组大小n，然后调用n次构造函数，针对复杂类型，new[]会额外存储数组大小；<br>①    new表达式调用一个名为operator  new(operator new[])函数，分配一块足够大的、原始的、未命名的内存空间；<br>②    编译器运行相应的构造函数以构造这些对象，并为其传入初始值；<br>③    对象被分配了空间并构造完成，返回一个指向该对象的指针。<br>2、    delete简单数据类型默认只是调用free函数；复杂数据类型先调用析构函数再调用operator delete；针对简单类型，delete和delete[]等同。假设指针p指向new[]分配的内存。因为要4字节存储数组大小，实际分配的内存地址为[p-4]，系统记录的也是这个地址。delete[]实际释放的就是p-4指向的内存。而delete会直接释放p指向的内存，这个内存根本没有被系统记录，所以会崩溃。<br>3、    需要在 new [] 一个对象数组时，需要保存数组的维度，C++ 的做法是在分配数组空间时多分配了 4 个字节的大小，专门保存数组的大小，在 delete [] 时就可以取出这个保存的数，就知道了需要调用析构函数多少次了。</p>
+<h2 id="50、-malloc申请的存储空间能用delete释放吗"><a href="#50、-malloc申请的存储空间能用delete释放吗" class="headerlink" title="50、 malloc申请的存储空间能用delete释放吗"></a>50、 malloc申请的存储空间能用delete释放吗</h2><p>不能，malloc /free主要为了兼容C，new和delete 完全可以取代malloc /free的。malloc /free的操作对象都是必须明确大小的。而且不能用在动态类上。new 和delete会自动进行类型检查和大小，malloc/free不能执行构造函数与析构函数，所以动态对象它是不行的。当然从理论上说使用malloc申请的内存是可以通过delete释放的。不过一般不这样写的。而且也不能保证每个C++的运行时都能正常。</p>
+<h2 id="51、-malloc与free的实现原理？"><a href="#51、-malloc与free的实现原理？" class="headerlink" title="51、 malloc与free的实现原理？"></a>51、 malloc与free的实现原理？</h2><p>1、    在标准C库中，提供了malloc/free函数分配释放内存，这两个函数底层是由brk、mmap、，munmap这些系统调用实现的;<br>2、    brk是将数据段(.data)的最高地址指针_edata往高地址推,mmap是在进程的虚拟地址空间中（堆和栈中间，称为文件映射区域的地方）找一块空闲的虚拟内存。这两种方式分配的都是虚拟内存，没有分配物理内存。在第一次访问已分配的虚拟地址空间的时候，发生缺页中断，操作系统负责分配物理内存，然后建立虚拟内存和物理内存之间的映射关系；<br>3、    malloc小于128k的内存，使用brk分配内存，将_edata往高地址推；malloc大于128k的内存，使用mmap分配内存，在堆和栈之间找一块空闲内存分配；brk分配的内存需要等到高地址内存释放以后才能释放，而mmap分配的内存可以单独释放。当最高地址空间的空闲内存超过128K（可由M_TRIM_THRESHOLD选项调节）时，执行内存紧缩操作（trim）。在上一个步骤free的时候，发现最高地址空闲内存超过128K，于是内存紧缩。<br>4、    malloc是从堆里面申请内存，也就是说函数返回的指针是指向堆里面的一块内存。操作系统中有一个记录空闲内存地址的链表。当操作系统收到程序的申请时，就会遍历该链表，然后就寻找第一个空间大于所申请空间的堆结点，然后就将该结点从空闲结点链表中删除，并将该结点的空间分配给程序。</p>
+<h2 id="52、-malloc、realloc、calloc的区别"><a href="#52、-malloc、realloc、calloc的区别" class="headerlink" title="52、 malloc、realloc、calloc的区别"></a>52、 malloc、realloc、calloc的区别</h2><p>1)    malloc函数<br>void <em> malloc(unsigned int num_size);<br>int </em> p = malloc(20 <em> sizeof(int));申请20个int类型的空间；<br>2)    calloc函数<br>void </em> calloc(size_t n,size_t size);<br>int <em> p = calloc(20, sizeof(int));<br>省去了人为空间计算；malloc申请的空间的值是随机初始化的，calloc申请的空间的值是初始化为0的；<br>3)    realloc函数<br>void realloc(void </em> p, size_t new_size);<br>给动态分配的空间分配额外的空间，用于扩充容量。</p>
+<h2 id="53、stdcall和cdecl的区别？"><a href="#53、stdcall和cdecl的区别？" class="headerlink" title="53、stdcall和cdecl的区别？"></a>53、<strong>stdcall和</strong>cdecl的区别？</h2><p>1)    <strong>stdcall
+</strong>stdcall是函数恢复堆栈，只有在函数代码的结尾出现一次恢复堆栈的代码；在编译时就规定了参数个数，无法实现不定个数的参数调用；<br>2)    <strong>cdecl
+</strong>cdecl是调用者恢复堆栈，假设有100个函数调用函数a，那么内存中就有100端恢复堆栈的代码；可以不定参数个数；每一个调用它的函数都包含清空堆栈的代码，所以产生的可执行文件大小会比调用__stacall函数大。</p>
+<h2 id="54、-使用智能指针管理内存资源，RAII"><a href="#54、-使用智能指针管理内存资源，RAII" class="headerlink" title="54、 使用智能指针管理内存资源，RAII"></a>54、 使用智能指针管理内存资源，RAII</h2><p>1)    RAII全称是“Resource Acquisition is Initialization”，直译过来是“资源获取即初始化”，也就是说在构造函数中申请分配资源，在析构函数中释放资源。因为C++的语言机制保证了，当一个对象创建的时候，自动调用构造函数，当对象超出作用域的时候会自动调用析构函数。所以，在RAII的指导下，我们应该使用类来管理资源，将资源和对象的生命周期绑定。<br>2)    智能指针（std::shared_ptr和std::unique_ptr）即RAII最具代表的实现，使用智能指针，可以实现自动的内存管理，再也不需要担心忘记delete造成的内存泄漏。毫不夸张的来讲，有了智能指针，代码中几乎不需要再出现delete了。</p>
+<h2 id="55、-怎样判断两个浮点数是否相等？"><a href="#55、-怎样判断两个浮点数是否相等？" class="headerlink" title="55、 怎样判断两个浮点数是否相等？"></a>55、 怎样判断两个浮点数是否相等？</h2><p>对两个浮点数判断大小和是否相等不能直接用==来判断，会出错！明明相等的两个数比较反而是不相等！对于两个浮点数比较只能通过相减并与预先设定的精度比较，记得要取绝对值！浮点数与0的比较也应该注意。与浮点数的表示方式有关。</p>
+<h2 id="56、-define、const、typedef、inline使用方法？"><a href="#56、-define、const、typedef、inline使用方法？" class="headerlink" title="56、 define、const、typedef、inline使用方法？"></a>56、 define、const、typedef、inline使用方法？</h2><p>一、    <span style="color:red">const与#define的区别：</span><br>1)    const定义的常量是变量带类型，而#define定义的只是个常数不带类型；<br>2)    define只在预处理阶段起作用，简单的文本替换，而const在编译、链接过程中起作用；<br>3)    define只是简单的字符串替换没有类型检查。而const是有数据类型的，是要进行判断的，可以避免一些低级错误；<br>4)    define预处理后，占用代码段空间，const占用数据段空间；<br>5)    const不能重定义，而define可以通过#undef取消某个符号的定义，进行重定义；<br>6)    define独特功能，比如可以用来防止文件重复引用。<br>二、    <span style="color:red">define和别名typedef的区别</span><br>1)    执行时间不同，typedef在编译阶段有效，typedef有类型检查的功能；#define是宏定义，发生在预处理阶段，不进行类型检查；<br>2)    功能差异，typedef用来定义类型的别名，定义与平台无关的数据类型，与struct的结合使用等。#define不只是可以为类型取别名，还可以定义常量、变量、编译开关等。<br>3)    作用域不同，#define没有作用域的限制，只要是之前预定义过的宏，在以后的程序中都可以使用。而typedef有自己的作用域。<br>三、    <span style="color:red">define与inline的区别</span><br>1)    #define是关键字，inline是函数；<br>2)    宏定义在预处理阶段进行文本替换，inline函数在编译阶段进行替换；<br>3)    inline函数有类型检查，相比宏定义比较安全；</p>
+<h2 id="57、-printf实现原理？"><a href="#57、-printf实现原理？" class="headerlink" title="57、 printf实现原理？"></a>57、 printf实现原理？</h2><p>在C/C++中，对函数参数的扫描是从后向前的。C/C++的函数参数是通过压入堆栈的方式来给函数传参数的（堆栈是一种先进后出的数据结构），最先压入的参数最后出来，在计算机的内存中，数据有2块，一块是堆，一块是栈（函数参数及局部变量在这里），而栈是从内存的高地址向低地址生长的，控制生长的就是堆栈指针了，最先压入的参数是在最上面，就是说在所有参数的最后面，最后压入的参数在最下面，结构上看起来是第一个，所以最后压入的参数总是能够被函数找到，因为它就在堆栈指针的上方。printf的第一个被找到的参数就是那个字符指针，就是被双引号括起来的那一部分，函数通过判断字符串里控制参数的个数来判断参数个数及数据类型，通过这些就可算出数据需要的堆栈指针的偏移量了，下面给出printf(“%d,%d”,a,b);（其中a、b都是int型的）的汇编代码.</p>
+<h2 id="58、-include-的顺序以及尖叫括号和双引号的区别"><a href="#58、-include-的顺序以及尖叫括号和双引号的区别" class="headerlink" title="58、 #include 的顺序以及尖叫括号和双引号的区别"></a>58、 #include 的顺序以及尖叫括号和双引号的区别</h2><p>表示编译器只在系统默认目录或尖括号内的工作目录下搜索头文件，并不去用户的工作目录下寻找，所以一般尖括号用于包含标准库文件；<br>表示编译器先在用户的工作目录下搜索头文件，如果搜索不到则到系统默认目录下去寻找，所以双引号一般用于包含用户自己编写的头文件。</p>
+<h2 id="59、-hello-world-程序开始到打印到屏幕上的全过程"><a href="#59、-hello-world-程序开始到打印到屏幕上的全过程" class="headerlink" title="59、 hello world 程序开始到打印到屏幕上的全过程?"></a>59、 hello world 程序开始到打印到屏幕上的全过程?</h2><p>1.用户告诉操作系统执行HelloWorld程序（通过键盘输入等）<br>2．操作系统：找到helloworld程序的相关信息，检查其类型是否是可执行文件；并通过程序首部信息，确定代码和数据在可执行文件中的位置并计算出对应的磁盘块地址。<br>3．操作系统：创建一个新进程，将HelloWorld可执行文件映射到该进程结构，表示由该进程执行helloworld程序。<br>4．操作系统：为helloworld程序设置cpu上下文环境，并跳到程序开始处。<br>5．执行helloworld程序的第一条指令，发生缺页异常<br>6．操作系统：分配一页物理内存，并将代码从磁盘读入内存，然后继续执行helloworld程序<br>7．helloword程序执行puts函数（系统调用），在显示器上写一字符串<br>8．操作系统：找到要将字符串送往的显示设备，通常设备是由一个进程控制的，所以，操作系统将要写的字符串送给该进程<br>9．操作系统：控制设备的进程告诉设备的窗口系统，它要显示该字符串，窗口系统确定这是一个合法的操作，然后将字符串转换成像素，将像素写入设备的存储映像区<br>10．视频硬件将像素转换成显示器可接收和一组控制数据信号<br>11．显示器解释信号，激发液晶屏<br>12．OK，我们在屏幕上看到了HelloWorld</p>
+<h2 id="60、-cout和printf有什么区别？"><a href="#60、-cout和printf有什么区别？" class="headerlink" title="60、 cout和printf有什么区别？"></a>60、 cout和printf有什么区别？</h2><p>cout&lt;&lt;是一个函数，cout&lt;&lt;后可以跟不同的类型是因为cout&lt;&lt;已存在针对各种类型数据的重载，所以会自动识别数据的类型。输出过程会首先将输出字符放入缓冲区，然后输出到屏幕。<br>cout是有缓冲输出:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout &lt; &lt; <span class="string">"abc "</span> &lt; &lt;endl;</span><br></pre></td></tr></table></figure></p>
+<p>或<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cout &lt; &lt; <span class="string">"abc\n "</span>;</span><br><span class="line">cout &lt; &lt;flush;</span><br></pre></td></tr></table></figure></p>
+<p> 这两个才是一样的.<br>endl相当于输出回车后，再强迫缓冲输出。<br>flush立即强迫缓冲输出。<br>printf是无缓冲输出。有输出时立即输出</p>
+<h2 id="61、-定义和声明的区别"><a href="#61、-定义和声明的区别" class="headerlink" title="61、 定义和声明的区别"></a>61、 定义和声明的区别</h2><ol>
+<li>如果是指变量的声明和定义<br>从编译原理上来说，声明是仅仅告诉编译器，有个某类型的变量会被使用，但是编译器并不会为它分配任何内存。而定义就是分配了内存。</li>
+<li>如果是指函数的声明和定义<br>声明：一般在头文件里，对编译器说：这里我有一个函数叫function() 让编译器知道这个函数的存在。<br>定义：一般在源文件里，具体就是函数的实现过程 写明函数体。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/c/" rel="tag"># c++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/02/c-面试02/" rel="next" title="c++面试02">
+                <i class="fa fa-chevron-left"></i> c++面试02
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/next/tx.jpg" alt="FelixRong">
+            
+              <p class="site-author-name" itemprop="name">FelixRong</p>
+              <p class="site-description motion-element" itemprop="description">这是一个测试博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://youtube.com/" target="_blank" title="YouTube">
+                      
+                        <i class="fa fa-fw fa-youtube"></i>YouTube</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#40、函数指针？"><span class="nav-text">40、函数指针？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#41、-说说你对c和c-的看法，c和c-的区别？"><span class="nav-text">41、 说说你对c和c++的看法，c和c++的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#42、-c-c-的内存分配，详细说一下栈、堆、静态存储区？"><span class="nav-text">42、 c/c++的内存分配，详细说一下栈、堆、静态存储区？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#43、-堆与栈的区别？"><span class="nav-text">43、 堆与栈的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#44、-野指针是什么？如何检测内存泄漏？"><span class="nav-text">44、 野指针是什么？如何检测内存泄漏？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#45、-悬空指针和野指针有什么区别？"><span class="nav-text">45、 悬空指针和野指针有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#46、-内存泄漏"><span class="nav-text">46、 内存泄漏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#47、-new和malloc的区别？"><span class="nav-text">47、 new和malloc的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#48、-delete-p-与delete-p，allocator"><span class="nav-text">48、 delete p;与delete[]p，allocator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#49、-new和delete的实现原理，-delete是如何知道释放内存的大小的额？"><span class="nav-text">49、 new和delete的实现原理， delete是如何知道释放内存的大小的额？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#50、-malloc申请的存储空间能用delete释放吗"><span class="nav-text">50、 malloc申请的存储空间能用delete释放吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#51、-malloc与free的实现原理？"><span class="nav-text">51、 malloc与free的实现原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#52、-malloc、realloc、calloc的区别"><span class="nav-text">52、 malloc、realloc、calloc的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#53、stdcall和cdecl的区别？"><span class="nav-text">53、stdcall和cdecl的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#54、-使用智能指针管理内存资源，RAII"><span class="nav-text">54、 使用智能指针管理内存资源，RAII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#55、-怎样判断两个浮点数是否相等？"><span class="nav-text">55、 怎样判断两个浮点数是否相等？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#56、-define、const、typedef、inline使用方法？"><span class="nav-text">56、 define、const、typedef、inline使用方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#57、-printf实现原理？"><span class="nav-text">57、 printf实现原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#58、-include-的顺序以及尖叫括号和双引号的区别"><span class="nav-text">58、 #include 的顺序以及尖叫括号和双引号的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#59、-hello-world-程序开始到打印到屏幕上的全过程"><span class="nav-text">59、 hello world 程序开始到打印到屏幕上的全过程?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#60、-cout和printf有什么区别？"><span class="nav-text">60、 cout和printf有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#61、-定义和声明的区别"><span class="nav-text">61、 定义和声明的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FelixRong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+</body>
+</html>
