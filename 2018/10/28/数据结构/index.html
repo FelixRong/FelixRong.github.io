@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="1、叶子结点个数有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
+<meta name="description" content="1、 叶子结点个数有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
 <meta name="keywords" content="AI,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构">
 <meta property="og:url" content="http://yoursite.com/2018/10/28/数据结构/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="1、叶子结点个数有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
+<meta property="og:description" content="1、 叶子结点个数有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-28T12:40:00.248Z">
+<meta property="og:updated_time" content="2018-11-03T13:56:34.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构">
-<meta name="twitter:description" content="1、叶子结点个数有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
+<meta name="twitter:description" content="1、 叶子结点个数有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
 
 
 
@@ -399,9 +399,20 @@
       
 
       
-        <h2 id="1、叶子结点个数"><a href="#1、叶子结点个数" class="headerlink" title="1、叶子结点个数"></a>1、叶子结点个数</h2><div>有N1个度为1的节点，N2个度为2的节点…<br>节点数=分支数+1<br>1）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1<br>总节点数：N=N0+N1+N2+…+Nm<a id="more"></a><br>总分支数：N=N1+2N2+3N3+mNm+1<br>N0=N2+2N3+3N4+…+(m-1)Nm+1</div>
+        <h2 id="1、-叶子结点个数"><a href="#1、-叶子结点个数" class="headerlink" title="1、 叶子结点个数"></a>1、 叶子结点个数</h2><div>有N1个度为1的节点，N2个度为2的节点…<br>节点数=分支数+1<br>1）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1<br>总节点数：N=N0+N1+N2+…+Nm<a id="more"></a><br>总分支数：N=N1+2N2+3N3+mNm+1<br>N0=N2+2N3+3N4+…+(m-1)Nm+1</div>
 
-<h2 id="2、堆（小根堆、大根堆）"><a href="#2、堆（小根堆、大根堆）" class="headerlink" title="2、堆（小根堆、大根堆）"></a>2、堆（小根堆、大根堆）</h2><div>利用完全二叉树的结构来维护一组数据。O(nlogn)。<br>优先队列：当访问元素时，具有优先级最高的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。通常采用堆数据结构来实现。</div>
+<h2 id="2、-堆（小根堆、大根堆）"><a href="#2、-堆（小根堆、大根堆）" class="headerlink" title="2、 堆（小根堆、大根堆）"></a>2、 堆（小根堆、大根堆）</h2><div>利用完全二叉树的结构来维护一组数据。O(nlogn)。<br>优先队列：当访问元素时，具有优先级最高的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。通常采用堆数据结构来实现。</div>
+
+<h2 id="3、-二叉树的性质"><a href="#3、-二叉树的性质" class="headerlink" title="3、 二叉树的性质"></a>3、 二叉树的性质</h2><p>性质1:在二叉树的第i层上至多有2i-1 个结点（i≥1）。（数学归纳法可证）</p>
+<p>性质2:深度为k的二叉树最多有2k-1个结点（k≥1）。（由性质1，通过等比数列求和可证）</p>
+<p>性质3:一棵二叉树的叶子结点数为n0 ，度为2的结点数为n2 ，则n0 = n2 + 1。</p>
+<p>性质4:具有n个结点的完全二叉树的深度为floor(log2n) + 1 。</p>
+<p>性质5:如果对一棵有n个结点的完全二叉树（其深度为floor(log2n) + 1 ）的结点按层序编号，则对任一结点i（1≤i≤n）有：</p>
+<p>(1)如果i = 1，则结点i是二叉树的根，无双亲；如果i &gt; 1，则其双亲PARENT(i)是结点 floor((i)/2)。</p>
+<p>(2)如果2i &gt; n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i。</p>
+<p>(3)如果2i + 1 &gt; n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i + 1</p>
+<h2 id="4、-不同二叉树个数"><a href="#4、-不同二叉树个数" class="headerlink" title="4、 不同二叉树个数"></a>4、 不同二叉树个数</h2><p>含有n个结点的不相似的二叉树有：C(2n, n) / (n + 1)</p>
+<h2 id="5、-求二叉树的复杂度"><a href="#5、-求二叉树的复杂度" class="headerlink" title="5、 求二叉树的复杂度"></a>5、 求二叉树的复杂度</h2><p>用常规的非递归方法遍历一个平衡二叉树，所需的时间复杂度和空间复杂度是 O(n) 和 O(n)。</p>
 
       
     </div>
@@ -601,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、叶子结点个数"><span class="nav-text">1、叶子结点个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、堆（小根堆、大根堆）"><span class="nav-text">2、堆（小根堆、大根堆）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、-叶子结点个数"><span class="nav-text">1、 叶子结点个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、-堆（小根堆、大根堆）"><span class="nav-text">2、 堆（小根堆、大根堆）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、-二叉树的性质"><span class="nav-text">3、 二叉树的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、-不同二叉树个数"><span class="nav-text">4、 不同二叉树个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、-求二叉树的复杂度"><span class="nav-text">5、 求二叉树的复杂度</span></a></li></ol></div>
             
 
           </div>
