@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="张凡荣">
 <meta property="og:description" content="1、叶子结点个数如：N0=N2+1 有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-09T02:39:53.122Z">
+<meta property="og:updated_time" content="2018-11-09T03:26:54.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客在线(第一次)">
 <meta name="twitter:description" content="1、叶子结点个数如：N0=N2+1 有N1个度为1的节点，N2个度为2的节点…节点数=分支数+11）树中的节点数等于所有节点的度数加1：N=N1+2N2+3N3+mNm+1总节点数：N=N0+N1+N2+…+Nm">
@@ -330,7 +330,7 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-11-09T10:39:53+08:00" content="2018-11-09">
+            <time itemprop="dateUpdated" datetime="2018-11-09T11:26:54+08:00" content="2018-11-09">
               2018-11-09
             </time>
           </span>
@@ -418,8 +418,8 @@
 <p><span style="color: red">性质5：</span>如果对一棵有n个结点的完全二叉树（其深度为floor(log2n) + 1 ）的结点按层序编号，则对任一结点i（1≤i≤n）有：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)如果i = 1，则结点i是二叉树的根，无双亲；如果i &gt; 1，则其双亲PARENT(i)是结点 floor((i)/2)。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)如果2i &gt; n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)如果2i + 1 &gt; n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i + 1</p>
-<h2 id="4、不同二叉树个数"><a href="#4、不同二叉树个数" class="headerlink" title="4、不同二叉树个数"></a>4、不同二叉树个数</h2><p>含有n个结点的不相似的二叉树有：C(2n, n) / (n + 1)<br>对一棵二叉树进行后续遍历，其输出结果为A，B，C，这样的二叉树有<strong>5</strong>棵。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)如果2i + 1 &gt; n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i + 1。</p>
+<h2 id="4、不同二叉树个数"><a href="#4、不同二叉树个数" class="headerlink" title="4、不同二叉树个数"></a>4、不同二叉树个数</h2><p>含有n个结点的不相似的二叉树有：C(2n, n) / (n + 1)。<br>对一棵二叉树进行后续遍历，其输出结果为A，B，C，这样的二叉树有<strong>5</strong>棵。</p>
 <p style="text-indent: 2em;"><span style="color: red">解：</span>三个结点有不相似的二叉树有5个。再根据后续输出为ABC的，找出符合条件的个数即可。</p>
 
 <h2 id="5、求二叉树的复杂度"><a href="#5、求二叉树的复杂度" class="headerlink" title="5、求二叉树的复杂度"></a>5、求二叉树的复杂度</h2><p>用常规的非递归方法遍历一个平衡二叉树，所需的时间复杂度和空间复杂度是 O(n) 和 O(n)。</p>
@@ -427,19 +427,19 @@
 <h2 id="7、字符串"><a href="#7、字符串" class="headerlink" title="7、字符串"></a>7、字符串</h2><p>1）串既可以用顺序存储，也可以用链式存储。<br>2）空串是不含任何字符的串，即空串的长度是零。空格串是由空格组成的串，其长度等于空格的个数。<br>3）模式匹配是串的一种重要运算。<br>4）字符数组初始化有两种方法：一种是逐个字符赋值，另一种是用字符常量对整个数组赋值。</p>
 <p></p><p style="text-indent: 2em">如：char b[10]={‘H’，’E’，’L’，’L’，’O’，’!’，’\0’};与char b[10]=”HELLO!”;</p><br>5）字符串是由零个或多个字符组成的有限序列。它是一种特殊的线性表，是一种取值范围受限的线性表，即它的<span style="color: red">数据元素只能取字符</span>这种类型的数据。<br>6）KMP算法最大的特点就是指示主串的指针不需要回溯，因此<span style="color: red">指针不可能变小。</span><br>7）C语言支持八进制字符集，这种字符要用反斜杠字符来标识。例如，在C程序中，下面的语句并不少见： <p></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(x==<span class="string">'\007'</span>)<span class="built_in">break</span>;</span><br></pre></td></tr></table></figure>
-<p>这里的”\007”恰好就是ASCII值为7的字符。<br>8）对于广义表的head和tail的理解了，head是第一个元素，tail是除了第一个元素的余下的。如果只有一个那么尾部是空</p>
-<h2 id="8、森林转换二叉树"><a href="#8、森林转换二叉树" class="headerlink" title="8、森林转换二叉树"></a>8、森林转换二叉树</h2><p>将森林F转换为对应的二叉树T，F中叶结点的个数等于<span style="color:red">T中左孩子指针为空的结点个数</span></p>
+<p>这里的”\007”恰好就是ASCII值为7的字符。<br>8）对于广义表的head和tail的理解了，head是第一个元素，tail是除了第一个元素的余下的。如果只有一个那么尾部是空。</p>
+<h2 id="8、森林转换二叉树"><a href="#8、森林转换二叉树" class="headerlink" title="8、森林转换二叉树"></a>8、森林转换二叉树</h2><p>将森林F转换为对应的二叉树T，F中叶结点的个数等于<span style="color:red">T中左孩子指针为空的结点个数。</span></p>
 <h2 id="9、树转二叉树"><a href="#9、树转二叉树" class="headerlink" title="9、树转二叉树"></a>9、树转二叉树</h2><p>转换规则：每个结点左指针指向它第一个孩子结点，右指针指向树中相邻兄弟结点。<br>给定一棵树，可以找到<span style="color: red">唯一</span>的一棵二叉树与之对应。<br>任何一棵和树对应的二叉树，其右子树必空。</p>
 <h2 id="10、线索二叉树"><a href="#10、线索二叉树" class="headerlink" title="10、线索二叉树"></a>10、线索二叉树</h2><p>引入线索二叉树为了加快查找结点前驱和后继的速度。<br><span style="color: red">在有N个结点的二叉树中，有N+1个空指针。</span></p>
 <p></p><p style="text-indent: 2em;margin: 0px;padding: 0px">1、因为每个叶结点有2个空指针，而每一个度为1的结点有1个空指针，总的空指针数为2N0+N1，又N0=N2+1，所以空指针为N0+N1+N2+1=N+1。</p><p></p>
-<p></p><p style="text-indent: 2em;margin: 0px;padding: 0px">2、一个有n个节点的线索二叉树，每个节点都有指向左右孩子的两个指针域，则共有2n个指针域，而n个节点共有n-1条分支，所以共有2n-(n-1)个空指针域，即有n+1个线索。</p><br>线索二叉树的线索数就是<span style="color: red">空指针域的数目。</span><br><span style="text-indent: 2em;display: block;">二叉树的线索化，实质上就是遍历一次二叉树，只是在遍历过程中，检查当前结点左、右指针域是否为空，若为空（Itag/Rtag=1），将它们改为指向前驱结点或后继结点的线索。这种遍历不再需要借助栈。</span><br><span style="text-indent: 2em;display: block;">若X是二叉树中序线索树中一个有左孩子的结点，且X不为根，则X的前驱为<span style="color: red">X的左子树中最右结点。</span>（可能没有最右叶子节点）</span><p></p>
-<h2 id="11、树高度（深度）"><a href="#11、树高度（深度）" class="headerlink" title="11、树高度（深度）"></a>11、树高度（深度）</h2><p>一棵具有 n个结点的完全二叉树的树高度（深度）是<br><span style="text-align: center;display: block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mo> &#x230A; <!-- left floor --> </mo> <msub> <mrow> <mi> log </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mi> N </mi> <mo> &#x230B; <!-- right floor --> </mo> <mo> + </mo> <mn> 1 </mn> </math></span></p>
+<p></p><p style="text-indent: 2em;margin: 0px;padding: 0px">2、一个有n个节点的线索二叉树，每个节点都有指向左右孩子的两个指针域，则共有2n个指针域，而n个节点共有n-1条分支，所以共有2n-(n-1)个空指针域，即有n+1个线索。</p><br>线索二叉树的线索数就是<span style="color: red">空指针域的数目。</span><br><span style="text-indent: 2em;display: block;">二叉树的线索化，实质上就是遍历一次二叉树，只是在遍历过程中，检查当前结点左、右指针域是否为空，若为空（Itag/Rtag=1），将它们改为指向前驱结点或后继结点的线索。这种遍历不再需要借助栈。</span><br><span style="text-indent: 2em;display: block;">若X是二叉树中序线索树中一个有左孩子的结点，且X不为根，则X的前驱为<span style="color: red">X的左子树中最右结点。</span>（可能没有最右叶子节点）。</span><p></p>
+<h2 id="11、树高度（深度）"><a href="#11、树高度（深度）" class="headerlink" title="11、树高度（深度）"></a>11、树高度（深度）</h2><p>一棵具有 n个结点的完全二叉树的树高度（深度）是<br><span style="text-align: center;display: block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mo> &#x230A; <!-- left floor --> </mo> <msub> <mrow> <mi> log </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mi> N </mi> <mo> &#x230B; <!-- right floor --> </mo> <mo> + </mo> <mn> 1 </mn> </math></span>。</p>
 <h2 id="12、B-树"><a href="#12、B-树" class="headerlink" title="12、B-树"></a>12、B-树</h2><p>m阶B-树是一棵<span style="color: red">m叉平衡排序树。</span></p>
-<h2 id="13、二叉排序树"><a href="#13、二叉排序树" class="headerlink" title="13、二叉排序树"></a>13、二叉排序树</h2><p>一个递归的数据结构。<br>对二叉排序树进行中序遍历，可以得到一个<span style="color: red">递增的有序序列。</span><br>插入：插入结点一定是某个叶结点。<br>删除：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1）叶结点，直接删除<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2）右子树为空，用左子女填补<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3）左子树为空，用右子女填补<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4）左右子树均不空，在右子树上找<span style="color: red">中序</span>第一个填补。<br>平均查找长度:<math xmlns="http://www.w3.org/1998/Math/MathML"> <mi> O </mi> <mfenced> <mrow> <msub> <mrow> <mi> log </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mi> n </mi> </mrow> </mfenced> </math></p>
+<h2 id="13、二叉排序树"><a href="#13、二叉排序树" class="headerlink" title="13、二叉排序树"></a>13、二叉排序树</h2><p>一个递归的数据结构。<br>对二叉排序树进行中序遍历，可以得到一个<span style="color: red">递增的有序序列。</span><br>插入：插入结点一定是某个叶结点。<br>删除：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1）叶结点，直接删除<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2）右子树为空，用左子女填补<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3）左子树为空，用右子女填补<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4）左右子树均不空，在右子树上找<span style="color: red">中序</span>第一个填补。<br>平均查找长度:<math xmlns="http://www.w3.org/1998/Math/MathML"> <mi> O </mi> <mfenced> <mrow> <msub> <mrow> <mi> log </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mi> n </mi> </mrow> </mfenced> </math>。</p>
 <h2 id="14、平衡二叉树"><a href="#14、平衡二叉树" class="headerlink" title="14、平衡二叉树"></a>14、平衡二叉树</h2><p>左右子树高度差的绝对值不超过1(-1、0、1)。</p>
 <h2 id="15、线性结构"><a href="#15、线性结构" class="headerlink" title="15、线性结构"></a>15、线性结构</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;线性结构是一个有序数据元素的集合。<br>数据结构中线性结构指的是数据元素之间存在着“一对一”的线性关系的数据结构。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常用的线性结构有：线性表，栈，队列，双队列，数组，串。<br>非线性结构的逻辑特征是一个结点元素可能对应多个直接前驱和多个后继。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如树，表，多维数组等。</p>
 <p><hr>A，广义表是非线性结构的，它也是线性表的一种推广<br>B，二叉树是树状结构<br>C，稀疏矩阵常用来存储图<br>D，串，如字符串，是线性结构</p>
-<h2 id="16、基础编程"><a href="#16、基础编程" class="headerlink" title="16、基础编程"></a>16、基础编程</h2><p>1）10进制相等的两个数转化为任意进制都会相等。<br>2）cin&gt;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该操作符是根据后面变量的类型读取数据。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入结束条件 ：遇到Enter、Space、Tab键。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对结束符的处理 ：丢弃缓冲区中使得输入结束的结束符(Enter、Space、Tab)</p>
+<h2 id="16、基础编程"><a href="#16、基础编程" class="headerlink" title="16、基础编程"></a>16、基础编程</h2><p>1）10进制相等的两个数转化为任意进制都会相等。<br>2）cin&gt;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该操作符是根据后面变量的类型读取数据。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入结束条件 ：遇到Enter、Space、Tab键。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对结束符的处理 ：丢弃缓冲区中使得输入结束的结束符(Enter、Space、Tab)。</p>
 
       
     </div>
