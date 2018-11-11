@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="张凡荣">
 <meta property="og:description" content="1、一个程序从编写到执行的经历步骤1、编写源程序。2、对源程序进行编译。把源程序翻译成二进制形式的“目标程序”(obj)。3、编译通过后，得到目标文件，与系统的库文件以及系统提供的其他信息连接起来，得到可执行的二进制文件(exe)。4、运行程序。5、分析运行结果。 2、类1、包含两种成员，数据成员(private)和成员函数(public)。2、在C++中把一组数据和有权调用这些数据的函数封装在一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T09:31:04.851Z">
+<meta property="og:updated_time" content="2018-11-11T15:20:51.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序语言">
 <meta name="twitter:description" content="1、一个程序从编写到执行的经历步骤1、编写源程序。2、对源程序进行编译。把源程序翻译成二进制形式的“目标程序”(obj)。3、编译通过后，得到目标文件，与系统的库文件以及系统提供的其他信息连接起来，得到可执行的二进制文件(exe)。4、运行程序。5、分析运行结果。 2、类1、包含两种成员，数据成员(private)和成员函数(public)。2、在C++中把一组数据和有权调用这些数据的函数封装在一">
@@ -330,8 +330,8 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-11-10T17:31:04+08:00" content="2018-11-10">
-              2018-11-10
+            <time itemprop="dateUpdated" datetime="2018-11-11T23:20:51+08:00" content="2018-11-11">
+              2018-11-11
             </time>
           </span>
         
@@ -408,9 +408,24 @@
       
         <h2 id="1、一个程序从编写到执行的经历步骤"><a href="#1、一个程序从编写到执行的经历步骤" class="headerlink" title="1、一个程序从编写到执行的经历步骤"></a>1、一个程序从编写到执行的经历步骤</h2><p>1、编写源程序。<br>2、对源程序进行编译。把源程序翻译成二进制形式的“目标程序”(obj)。<br>3、编译通过后，得到目标文件，与系统的库文件以及系统提供的其他信息连接起来，得到可执行的二进制文件(exe)。<br>4、运行程序。<br>5、分析运行结果。</p>
 <h2 id="2、类"><a href="#2、类" class="headerlink" title="2、类"></a>2、类</h2><p>1、包含两种成员，数据成员(private)和成员函数(public)。<br>2、在C++中把一组数据和有权调用这些数据的函数封装在一起，组成一种称为“类”的数据结构。<br>3、被指定为私有的成员(函数和数据)只能被本类的成员函数所调用，而不能被类以外的语句调用(除了“友元类”外)。目的是对数据进行保护。<br>4、有了类，就可以实现面向对象程序设计方法中的封装、信息隐蔽、继承、派生、多态等功能。</p>
-<h2 id="3、字符与整形"><a href="#3、字符与整形" class="headerlink" title="3、字符与整形"></a>3、字符与整形</h2><p>‘A’=65,’a’=97。<br>sizeof(‘a’)=1;<br>sizeof(“a”)=2。<br>1、将字符赋给整形变量。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int i,j;</span><br><span class="line">i=<span class="string">'A'</span>;</span><br><span class="line">j=<span class="string">'B'</span>;</span><br><span class="line">cout&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;j&lt;&lt;endl;</span><br></pre></td></tr></table></figure></p>
-<p>2、字符数据与整数进行算术运算，实现大小写转换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">char c1,c2;</span><br><span class="line">c1=<span class="string">'a'</span>;</span><br><span class="line">c2=<span class="string">'b'</span>;</span><br><span class="line">c1=c1-32;</span><br><span class="line">c2=c2-32;</span><br><span class="line">cout&lt;&lt;c1&lt;&lt;<span class="string">" "</span>&lt;&lt;c2&lt;&lt;endl;</span><br></pre></td></tr></table></figure></p>
-<p>3、字符串常量”abc\n”包含几个字符？<br>为4个字符，但在内存中占5个字节。<br>4、字符串常量”abc\n”包含几个字符？<br>为5个字符，’a’、’b’、’c’、’\’、’n’。</p>
+<h2 id="3、字符与整形"><a href="#3、字符与整形" class="headerlink" title="3、字符与整形"></a>3、字符与整形</h2><p>‘A’=65,’a’=97。<br>sizeof(‘a’)=1;<br>sizeof(“a”)=2。<br>1）将字符赋给整形变量。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int i,j;</span><br><span class="line">i=<span class="string">'A'</span>;</span><br><span class="line">j=<span class="string">'B'</span>;</span><br><span class="line">cout&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;j&lt;&lt;endl;</span><br></pre></td></tr></table></figure></p>
+<p>2）字符数据与整数进行算术运算，实现大小写转换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">char c1,c2;</span><br><span class="line">c1=<span class="string">'a'</span>;</span><br><span class="line">c2=<span class="string">'b'</span>;</span><br><span class="line">c1=c1-32;</span><br><span class="line">c2=c2-32;</span><br><span class="line">cout&lt;&lt;c1&lt;&lt;<span class="string">" "</span>&lt;&lt;c2&lt;&lt;endl;</span><br></pre></td></tr></table></figure></p>
+<p>3）字符串常量”abc\n”包含几个字符？<br>为4个字符，但在内存中占5个字节。<br>4）字符串常量”abc\n”包含几个字符？<br>为5个字符，’a’、’b’、’c’、’\’、’n’。</p>
+<h2 id="4、为变量赋初值"><a href="#4、为变量赋初值" class="headerlink" title="4、为变量赋初值"></a>4、为变量赋初值</h2><p>对多个变量赋同一个初值，必须分别指定。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> a=b=c=4.5;</span><br></pre></td></tr></table></figure></p>
+<p>应写成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> a=4.5,b=4.5,c=4.5;</span><br></pre></td></tr></table></figure></p>
+<h2 id="5、常变量"><a href="#5、常变量" class="headerlink" title="5、常变量"></a>5、常变量</h2><p>在定义变量时，如果加上关键字const，则变量的值在程序运行期间不能改变。<br>在定义变量时必须同时对它初始化，此后它的值不能再改变。即:<span style="color: red">常变量不能被赋值。</span><br>注：从计算机实现的角度看，变量的特征是存在一个以变量名命名的存储单元，在一般情况下，存储单元中的内容是可以变化的。对常变量来说，无非在此变量的基础上加上一个限定：存储单元的值不允许变化。因此常变量又称为只读变量。</p>
+<p><div style="font-weight: bold;">区别#define命令定义的符号常量和用const定义的常变量。</div><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;符合常量只是用一个符号代替一个字符串，在预编译时把所有符号常量替换为指定的字符串，它没有类型，在内存中并不存在以符号常量命名的存储单元。而常变量具有变量的特征，它具有类型，在内存中存在以它命名的存储单元。</p>
+<h2 id="6、自增和自减"><a href="#6、自增和自减" class="headerlink" title="6、自增和自减"></a>6、自增和自减</h2><p>++i是先执行i=i+1后，再使用i的值。<br>i++是先使用i的值后，再执行i=i+1。</p>
+<h2 id="7、单个字符输入和输出"><a href="#7、单个字符输入和输出" class="headerlink" title="7、单个字符输入和输出"></a>7、单个字符输入和输出</h2><p>putchar函数：向终端输出<span style="color: red">一个字符。</span><br>getchar函数：从终端输入<span style="color: red">一个字符。</span>没有参数，一般为getchar()。</p>
+<h2 id="8、静态局部变量"><a href="#8、静态局部变量" class="headerlink" title="8、静态局部变量"></a>8、静态局部变量</h2><p>函数中的局部变量的值在函数调用结束后不消失而保留原值，即其占用的存储单元不释放，在下一次该函数调用时，该变量保留上一次函数调用结束时的值。</p>
+<h2 id="9、预处理命令"><a href="#9、预处理命令" class="headerlink" title="9、预处理命令"></a>9、预处理命令</h2><p>预处理命令是C++统一规定的，但是不是C++语言本身的组成部分，不能直接对它们进行编译(因为编译程序不能识别它们)。<br>有三种：<br>1）宏定义</p>
+<p></p><p style="text-align: center;">#define 标识符 字符串</p><br>2）文件包含<p></p>
+<p></p><p style="text-align: center;">#include &lt;文件名&gt; 或 #include “文件名”</p><br>头文件一般包含以下几类内容<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)对类型的声明<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)函数声明<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)内置(inline)函数的定义<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)宏定义<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)全局变量定义<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)外部变量声明<br>3）条件编译<br>一般情况下，在进行编译时对源程序中的每一行都要编译。有时候希望程序中某一部分内容只在一定条件时才进行编译。<p></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifdef 标识符</span></span><br><span class="line">  程序段1</span><br><span class="line"><span class="comment">#else</span></span><br><span class="line">  程序段2</span><br><span class="line"><span class="comment">#endif</span></span><br></pre></td></tr></table></figure>
+<h2 id="10、数组"><a href="#10、数组" class="headerlink" title="10、数组"></a>10、数组</h2><p>定义一维数组：类型标识符 数组名[常量表达式]<br>常量表达式的值表示元素的个数，即数组长度。可以包括常量、常变量和符号常量，<span style="color: red">但不包括变量。</span><br>下面是不可行的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int n;</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line">int a[n];</span><br></pre></td></tr></table></figure></p>
+<p>前两行可以改为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const int n=5;</span><br></pre></td></tr></table></figure></p>
+<p>在对全部数组元素赋初值时，可以不指定数组长度。如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[]=&#123;1,2,3,4,5&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>另：数组名也可以作实参和形参，传递的是数组的初始地址。</p>
 
       
     </div>
@@ -444,6 +459,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/11/斐波那契数列/" rel="prev" title="斐波那契数列.cpp">
+                斐波那契数列.cpp <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -529,7 +548,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -606,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、一个程序从编写到执行的经历步骤"><span class="nav-text">1、一个程序从编写到执行的经历步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、类"><span class="nav-text">2、类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字符与整形"><span class="nav-text">3、字符与整形</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、一个程序从编写到执行的经历步骤"><span class="nav-text">1、一个程序从编写到执行的经历步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、类"><span class="nav-text">2、类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字符与整形"><span class="nav-text">3、字符与整形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、为变量赋初值"><span class="nav-text">4、为变量赋初值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、常变量"><span class="nav-text">5、常变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、自增和自减"><span class="nav-text">6、自增和自减</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、单个字符输入和输出"><span class="nav-text">7、单个字符输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、静态局部变量"><span class="nav-text">8、静态局部变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、预处理命令"><span class="nav-text">9、预处理命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、数组"><span class="nav-text">10、数组</span></a></li></ol></div>
             
 
           </div>
