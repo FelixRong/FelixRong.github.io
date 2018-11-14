@@ -115,18 +115,20 @@
 
 
 
-<meta name="description" content="1、损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，">
+<meta name="description" content="仿射变换是二维平面中一种重要的变换，在图像图形领域有广泛的应用。 所谓的“仿射变换”就是一种简单的变换，它的变化包括旋转、平移、伸缩，原来的直线仿射变换后还是直线，">
 <meta name="keywords" content="AI,Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习02">
-<meta property="og:url" content="http://yoursite.com/2018/10/28/机器学习基础02/index.html">
+<meta property="og:title" content="放射变换">
+<meta property="og:url" content="http://yoursite.com/2018/11/07/LabWork-2018-11-07-放射变换/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="1、损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，">
+<meta property="og:description" content="仿射变换是二维平面中一种重要的变换，在图像图形领域有广泛的应用。 所谓的“仿射变换”就是一种简单的变换，它的变化包括旋转、平移、伸缩，原来的直线仿射变换后还是直线，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-28T12:42:33.000Z">
+<meta property="og:image" content="http://yoursite.com/images/LabKnowledge/fsbh.jpg">
+<meta property="og:updated_time" content="2018-11-09T02:50:06.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习02">
-<meta name="twitter:description" content="1、损失函数损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，">
+<meta name="twitter:title" content="放射变换">
+<meta name="twitter:description" content="仿射变换是二维平面中一种重要的变换，在图像图形领域有广泛的应用。 所谓的“仿射变换”就是一种简单的变换，它的变化包括旋转、平移、伸缩，原来的直线仿射变换后还是直线，">
+<meta name="twitter:image" content="http://yoursite.com/images/LabKnowledge/fsbh.jpg">
 
 
 
@@ -156,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/28/机器学习基础02/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/07/LabWork-2018-11-07-放射变换/">
 
 
 
 
 
-  <title>机器学习02 | 张凡荣</title>
+  <title>放射变换 | 张凡荣</title>
   
 
 
@@ -289,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/28/机器学习基础02/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/LabWork-2018-11-07-放射变换/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FelixRong">
@@ -306,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习02</h1>
+          <h1 class="post-title" itemprop="name headline">放射变换</h1>
         
 
         <div class="post-meta">
@@ -318,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T15:25:03+08:00">
-                2018-10-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-07T11:53:44+08:00">
+                2018-11-07
               </time>
             
 
@@ -330,8 +332,8 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-10-28T20:42:33+08:00" content="2018-10-28">
-              2018-10-28
+            <time itemprop="dateUpdated" datetime="2018-11-09T10:50:06+08:00" content="2018-11-09">
+              2018-11-09
             </time>
           </span>
         
@@ -348,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
+                  <a href="/categories/实验室学习/" itemprop="url" rel="index">
+                    <span itemprop="name">实验室学习</span>
                   </a>
                 </span>
 
@@ -366,8 +368,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/28/机器学习基础02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/10/28/机器学习基础02/" itemprop="commentsCount"></span>
+                <a href="/2018/11/07/LabWork-2018-11-07-放射变换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/11/07/LabWork-2018-11-07-放射变换/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -375,7 +377,7 @@
 
           
           
-             <span id="/2018/10/28/机器学习基础02/" class="leancloud_visitors" data-flag-title="机器学习02">
+             <span id="/2018/11/07/LabWork-2018-11-07-放射变换/" class="leancloud_visitors" data-flag-title="放射变换">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,14 +408,8 @@
       
 
       
-        <h2 id="1、损失函数"><a href="#1、损失函数" class="headerlink" title="1、损失函数"></a>1、损失函数</h2><p style="text-indent: 2em;margin: 0px;padding: 0px">损失函数和代价函数是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数（loss function）。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">我们给定 x，这三个函数都会输出一个 f(x),这个输出的 f(x)与真实值 y 可能是相同的，也可能是不同的，为了表示我们拟合的好坏，我们就用一个函数来度量拟合的程度，<a id="more"></a>比如：L(Y,f(x))=(Y-f(x))^2，这个函数就称为损失函数(loss function)，或者叫代价函数(cost function)。损失函数越小，就代表模型拟合的越好。</p>
-
-<h2 id="2、决策树（Decision-Tree）"><a href="#2、决策树（Decision-Tree）" class="headerlink" title="2、决策树（Decision Tree）"></a>2、决策树（Decision Tree）</h2><p>基本的分类与回归方法</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">在分类问题中，表示基于特征对实例进行分类的过程，可以认为是if-then的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">决策树通常有三个步骤：特征选择、决策树的生成、决策树的修剪。</p>
-
-<h2 id="3、随机森林（Random-Forest）"><a href="#3、随机森林（Random-Forest）" class="headerlink" title="3、随机森林（Random Forest）"></a>3、随机森林（Random Forest）</h2><p>随机森林特点：<br>    在当前所有算法中，具有极好的准确率<br>    能够有效地运行在大数据集上<br>    能够处理具有高维特征的输入样本，而且不需要降维<br>    能够评估各个特征在分类问题上的重要性<br>    在生成过程中，能够获取到内部生成误差的一种无偏估计<br>    对于缺省值问题也能够获得很好得结果</p>
-<p style="text-indent: 2em;margin: 0px;padding: 0px">随机森林就是通过集成学习的思想将多棵树集成的一种算法，它的基本单元是决策树，而它的本质属于机器学习的一大分支——集成学习（Ensemble Learning）方法。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">其实从直观角度来解释，每棵决策树都是一个分类器（假设现在针对的是分类问题），那么对于一个输入样本，N棵树会有N个分类结果。而随机森林集成了所有的分类投票结果，将投票次数最多的类别指定为最终的输出，这就是一种最简单的 Bagging 思想。</p>
-
-<h3 id="3-1、信息、熵以及信息增益的概念"><a href="#3-1、信息、熵以及信息增益的概念" class="headerlink" title="3.1、信息、熵以及信息增益的概念"></a>3.1、信息、熵以及信息增益的概念</h3><p style="text-indent: 2em;margin: 0px;padding: 0px">这三个基本概念是决策树的根本，是决策树利用特征来分类时，确定特征选取顺序的依据。</p><br>引用香农的话来说，<span style="color: red">信息是用来消除随机不确定性的东西。</span><br>某个类（Xi）的信息可定义为：<br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mi> I </mi> <mfenced> <mrow> <mi> X </mi> <mo> = </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mi> i </mi> </mrow> </msub> </mrow> </mfenced> <mo> = </mo> <mo> - </mo> <msub> <mrow> <mi> log </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mi> p </mi> <mfenced> <mrow> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mi> i </mi> </mrow> </msub> </mrow> </mfenced> </math></span><br><p style="text-indent: 2em;margin: 0px;padding: 0px">I(x)用来表示随机变量的信息，p(xi)指是当xi发生时的概率。</p><br><p style="text-indent: 2em;margin: 0px;padding: 0px">一个消息可能性（概率）越小，其信息量越大。熵越大，代表该随机变量取特定值的时候具有的信息量越大。</p>
+        <p></p><p style="text-indent: 2em;margin: 0 auto;padding: 0 auto;line-height: 5px">仿射变换是二维平面中一种重要的变换，在图像图形领域有广泛的应用。</p><p></p>
+<p></p><p style="text-indent: 2em;margin: 0 auto;padding: 0 auto">所谓的“仿射变换”就是一种简单的变换，它的变化包括旋转、平移、伸缩，原来的直线仿射变换后还是直线，<a id="more"></a>原来的平行线经过仿射变换之后还是平行线，这就是仿射。</p>我们能够用仿射变换来表示:<br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旋转 (线性变换)</span><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平移 (向量加)</span><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;缩放操作 (线性变换)</span><br>仿射变换的矩阵是齐次坐标形式的变换矩阵<br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <mi> cos </mi> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mtd> <mtd> <mi> sin </mi> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mtd> <mtd> <mi> t </mi> <mi> x </mi> </mtd> </mtr> <mtr> <mtd> <mo> - </mo> <mi> sin </mi> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mtd> <mtd> <mi> cos </mi> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mtd> <mtd> <mi> t </mi> <mi> y </mi> </mtd> </mtr> <mtr> <mtd> <mn> 0 </mn> </mtd> <mtd> <mn> 0 </mn> </mtd> <mtd> <mn> 1 </mn> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> </math></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个矩阵包含的变换有旋转和平移。仿射变换的数学公式里，是如何做到坐标点位置的平移呢？清楚这个才是弄明白仿射变换的关键。<br><img src="/images/LabKnowledge/fsbh.jpg" alt="仿射变换">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个点P在原始坐标系下的坐标是(Xsp,Ysp)。然后要完成旋转操作，旋转操作是基于原点的，如何得到旋转之后的点的坐标，这里用到一个技巧，坐标系中某个点的旋转可以等价地去旋转坐标轴，所以有了上图中以(Xs0,Ys0)为中心的虚线与屏幕水平垂直的坐标系。在这个坐标系中确定P的坐标，和在蓝色坐标系中确定旋转之后P的坐标是等价的。基于这个结论，我们可以通过简单的立体几何知识确定P在新坐标系中的坐标。<br>P在新坐标系中的X坐标和Y坐标分别是:<br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <msub> <mrow> <mi> Y </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> <mi> sin </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> y </mi> </mrow> </msub> <mo> + </mo> <msub> <mrow> <mi> X </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> <mi> cos </mi> <mi> &#x03B8; <!-- greek small letter theta --> </mi> <mi> x </mi> </math></span><br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <msub> <mrow> <mi> Y </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> <mi> cos </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> y </mi> </mrow> </msub> <mo> + </mo> <msub> <mrow> <mi> X </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> <mi> sin </mi> <mi> &#x03B8; <!-- greek small letter theta --> </mi> <mi> x </mi> </math></span><br>经典的仿射变换的模型呼之欲出了。整理上面两个式子得：<br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <mi> x </mi> <mo> ‘  </mo> </mtd> </mtr> <mtr> <mtd> <mi> y </mi> <mo> ‘ </mo> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> <mo> = </mo> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <mi> cos </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> x </mi> </mrow> </msub> </mtd> <mtd> <mi> sin </mi><msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi></mrow><mrow> <mi> y </mi> </mrow></msub></mtd> </mtr> <mtr> <mtd> <mo> - </mo> <mi> sin </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> x </mi> </mrow> </msub> </mtd> <mtd> <mi> cos </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> y </mi> </mrow> </msub> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> <mo> &#x00D7; <!-- multiplication sign --> </mo> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <msub> <mrow> <mi> X </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> </mtd> </mtr> <mtr> <mtd> <msub> <mrow> <mi> Y </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> </math></span>这就是仿射变换模型中旋转部分的原理，还有一步，就是平移。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旋转变换之后，我们确定了P点在新坐标系中的位置，然后在这个位置的基础上加上其在X轴和Y轴的偏移即可。<br><span style="text-align:center;display:block;"><math xmlns="http://www.w3.org/1998/Math/MathML"> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <mi> x </mi> <mo> ‘  </mo> </mtd> </mtr> <mtr> <mtd> <mi> y </mi> <mo> ‘ </mo> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> <mo> = </mo> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <mi> cos </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> x </mi> </mrow> </msub> </mtd> <mtd> <mi> sin </mi><msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi></mrow><mrow> <mi> y </mi> </mrow></msub></mtd> </mtr> <mtr> <mtd> <mo> - </mo> <mi> sin </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> x </mi> </mrow> </msub> </mtd> <mtd> <mi> cos </mi> <msub> <mrow> <mi> &#x03B8; <!-- greek small letter theta --> </mi> </mrow> <mrow> <mi> y </mi> </mrow> </msub> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> <mo> &#x00D7; <!-- multiplication sign --> </mo> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <msub> <mrow> <mi> X </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> </mtd> </mtr> <mtr> <mtd> <msub> <mrow> <mi> Y </mi> </mrow> <mrow> <mi> s </mi> <mi> p </mi> </mrow> </msub> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo><mo> + </mo> <mo> [ </mo> <mrow> <mtable> <mtr> <mtd> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mi> x </mi> </mrow> </msub> </mtd> </mtr> <mtr> <mtd> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mi> y </mi> </mrow> </msub> </mtd> </mtr> </mtable> </mrow> <mo> ] </mo> </math></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;利用了不移动点移动坐标系的策略，将坐标系向相反方向移动了相应的距离。上图中我们可以看到，整个在对P点进行仿射变换的过程中，P点的位置并没有移动，我们是通过不断的坐标系的调整来间接达到P点移动的效果，这充分说明了一件事：运动都是相对的。<p></p>
 
       
     </div>
@@ -438,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/28/论文/" rel="next" title="论文">
-                <i class="fa fa-chevron-left"></i> 论文
+              <a href="/2018/11/04/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -448,8 +444,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/28/常识知识/" rel="prev" title="常识知识">
-                常识知识 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/10/NowCoder-2018-11-10-程序语言/" rel="prev" title="程序语言">
+                程序语言 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -509,17 +505,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -536,7 +523,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -603,22 +590,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、损失函数"><span class="nav-text">1、损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、决策树（Decision-Tree）"><span class="nav-text">2、决策树（Decision Tree）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、随机森林（Random-Forest）"><span class="nav-text">3、随机森林（Random Forest）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1、信息、熵以及信息增益的概念"><span class="nav-text">3.1、信息、熵以及信息增益的概念</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
