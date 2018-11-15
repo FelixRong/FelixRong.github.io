@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="张凡荣">
 <meta property="og:description" content="1、一个程序从编写到执行的经历步骤1、编写源程序。2、对源程序进行编译。把源程序翻译成二进制形式的“目标程序”(obj)。3、编译通过后，得到目标文件，与系统的库文件以及系统提供的其他信息连接起来，得到可执行的二进制文件(exe)。4、运行程序。5、分析运行结果。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-14T04:40:08.493Z">
+<meta property="og:updated_time" content="2018-11-15T14:29:50.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序语言">
 <meta name="twitter:description" content="1、一个程序从编写到执行的经历步骤1、编写源程序。2、对源程序进行编译。把源程序翻译成二进制形式的“目标程序”(obj)。3、编译通过后，得到目标文件，与系统的库文件以及系统提供的其他信息连接起来，得到可执行的二进制文件(exe)。4、运行程序。5、分析运行结果。">
@@ -330,8 +330,8 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-11-14T12:40:08+08:00" content="2018-11-14">
-              2018-11-14
+            <time itemprop="dateUpdated" datetime="2018-11-15T22:29:50+08:00" content="2018-11-15">
+              2018-11-15
             </time>
           </span>
         
@@ -443,6 +443,7 @@
 <h3 id="14-1、构造函数初始化"><a href="#14-1、构造函数初始化" class="headerlink" title="14.1、构造函数初始化"></a>14.1、构造函数初始化</h3><p>建立对象时自动执行。名字必须与类名同名。不具有任何类型，不返回任何值。<br>构造函数一般声明为public。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Box box1(12,23,15);// 建立对象指定值，根据带参数的构造函数。</span><br></pre></td></tr></table></figure></p>
 <p>在一个类中可以定义多个构造函数，以便对类对象提供不同的初始化方法，供用户选用。这些构造函数具有相同的名字，而参数的个数或参数的类型不相同，称为构造函数的重载。</p>
 <h3 id="14-2、析构函数"><a href="#14-2、析构函数" class="headerlink" title="14.2、析构函数"></a>14.2、析构函数</h3><p>~ 为取反运算符，析构函数是与构造函数作用相反的函数。<br>当对象的生命期结束时，会自动执行析构函数。<br>只能有一个析构函数。</p>
+<h3 id="14-3、调用顺序"><a href="#14-3、调用顺序" class="headerlink" title="14.3、调用顺序"></a>14.3、调用顺序</h3><p>先构造的后析构，后构造的先析构。它相当于一个栈，先进后出。</p>
 
       
     </div>
@@ -642,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、一个程序从编写到执行的经历步骤"><span class="nav-text">1、一个程序从编写到执行的经历步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、类"><span class="nav-text">2、类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字符与整形"><span class="nav-text">3、字符与整形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、为变量赋初值"><span class="nav-text">4、为变量赋初值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、常变量"><span class="nav-text">5、常变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、自增和自减"><span class="nav-text">6、自增和自减</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、单个字符输入和输出"><span class="nav-text">7、单个字符输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、静态局部变量"><span class="nav-text">8、静态局部变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、预处理命令"><span class="nav-text">9、预处理命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、数组"><span class="nav-text">10、数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、字符数组"><span class="nav-text">11、字符数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1、字符串输入输出"><span class="nav-text">11.1、字符串输入输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2、字符串处理函数"><span class="nav-text">11.2、字符串处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3、C-字符串类型-string-类型"><span class="nav-text">11.3、C++ 字符串类型(string 类型)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-3-1、字符串数组"><span class="nav-text">11.3.1、字符串数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、变量的初始化"><span class="nav-text">12、变量的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、指针与指针变量"><span class="nav-text">13、指针与指针变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14、类Class"><span class="nav-text">14、类Class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#14-1、构造函数初始化"><span class="nav-text">14.1、构造函数初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-2、析构函数"><span class="nav-text">14.2、析构函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、一个程序从编写到执行的经历步骤"><span class="nav-text">1、一个程序从编写到执行的经历步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、类"><span class="nav-text">2、类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字符与整形"><span class="nav-text">3、字符与整形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、为变量赋初值"><span class="nav-text">4、为变量赋初值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、常变量"><span class="nav-text">5、常变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、自增和自减"><span class="nav-text">6、自增和自减</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、单个字符输入和输出"><span class="nav-text">7、单个字符输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、静态局部变量"><span class="nav-text">8、静态局部变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、预处理命令"><span class="nav-text">9、预处理命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、数组"><span class="nav-text">10、数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、字符数组"><span class="nav-text">11、字符数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1、字符串输入输出"><span class="nav-text">11.1、字符串输入输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2、字符串处理函数"><span class="nav-text">11.2、字符串处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3、C-字符串类型-string-类型"><span class="nav-text">11.3、C++ 字符串类型(string 类型)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-3-1、字符串数组"><span class="nav-text">11.3.1、字符串数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、变量的初始化"><span class="nav-text">12、变量的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、指针与指针变量"><span class="nav-text">13、指针与指针变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14、类Class"><span class="nav-text">14、类Class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#14-1、构造函数初始化"><span class="nav-text">14.1、构造函数初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-2、析构函数"><span class="nav-text">14.2、析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-3、调用顺序"><span class="nav-text">14.3、调用顺序</span></a></li></ol></li></ol></div>
             
 
           </div>
