@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="题1定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添加一个构造函数和析构函数，">
+<meta name="description" content="题1C++类型转换有四种 题2定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添">
 <meta name="keywords" content="offer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指offer面试">
 <meta property="og:url" content="http://yoursite.com/2018/11/03/OfferBook-2018-11-03-剑指offer面试/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="题1定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添加一个构造函数和析构函数，">
+<meta property="og:description" content="题1C++类型转换有四种 题2定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-14T01:16:21.515Z">
+<meta property="og:updated_time" content="2018-11-19T11:50:06.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指offer面试">
-<meta name="twitter:description" content="题1定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添加一个构造函数和析构函数，">
+<meta name="twitter:description" content="题1C++类型转换有四种 题2定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添">
 
 
 
@@ -330,8 +330,8 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-11-14T09:16:21+08:00" content="2018-11-14">
-              2018-11-14
+            <time itemprop="dateUpdated" datetime="2018-11-19T19:50:06+08:00" content="2018-11-19">
+              2018-11-19
             </time>
           </span>
         
@@ -348,8 +348,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/剑指offer/" itemprop="url" rel="index">
-                    <span itemprop="name">剑指offer</span>
+                  <a href="/categories/剑指offerBook/" itemprop="url" rel="index">
+                    <span itemprop="name">剑指offerBook</span>
                   </a>
                 </span>
 
@@ -406,8 +406,9 @@
       
 
       
-        <h2 id="题1"><a href="#题1" class="headerlink" title="题1"></a>题1</h2><p><span style="color: red">定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？</span><br>答：1。<br><span style="color: red">为什么不是0？</span><br>答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。<br><span style="color: red">如果在该类型中添加一个构造函数和析构函数，再对该类型求sizeof，得到的结果又是多少？</span><br>答：和前面一样，还是1.调用构造函数和析构函数只需要知道函数的地址即可，<a id="more"></a>而这些函数的地址只与类型相关，而与类型的实例无关，编译器也不会因为这两个函数而在实例内添加任何额外的信息。<br><span style="color: red">那如果把析构函数标记为虚函数呢？</span><br>答：C++ 的编译器一旦发现一个类型中有虚拟函数，就会为该类型生成虚函数表，并在该类型的每一个实例中添加一个指向虚函数表的指针。<span style="color: blue">在32位的机器上，一个指针占4字节的空间，因此求sizeof得到4；如果是64位的机器，一个指针占8字节的空间，因此求sizeof则得到8。</span>即：在32位系统上，对任意指针求sizeof，得到的结果都是4.</p>
-<h2 id="题2"><a href="#题2" class="headerlink" title="题2"></a>题2</h2><p><span style="color: red">C++ 中可以用struct和class来定义类型。这两种类型有什么区别？</span><br>答：如果没有表明成员函数或者成员变量的访问权限级别，<span style="font-weight: bold;">在struct中默认是public，而在class中默认是private。</span></p>
+        <h2 id="题1"><a href="#题1" class="headerlink" title="题1"></a>题1</h2><p><span style="color: red">C++类型转换有四种</span></p>
+<h2 id="题2"><a href="#题2" class="headerlink" title="题2"></a>题2</h2><p><span style="color: red">定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？</span><br>答：1。<br><span style="color: red">为什么不是0？</span><br>答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。<br><span style="color: red">如果在该类型中添加一个构造函数和析构函数，再对该类型求sizeof，得到的结果又是多少？</span><br>答：和前面一样，还是1.调用构造函数和析构函数只需要知道函数的地址即可，<a id="more"></a>而这些函数的地址只与类型相关，而与类型的实例无关，编译器也不会因为这两个函数而在实例内添加任何额外的信息。<br><span style="color: red">那如果把析构函数标记为虚函数呢？</span><br>答：C++ 的编译器一旦发现一个类型中有虚拟函数，就会为该类型生成虚函数表，并在该类型的每一个实例中添加一个指向虚函数表的指针。<span style="color: blue">在32位的机器上，一个指针占4字节的空间，因此求sizeof得到4；如果是64位的机器，一个指针占8字节的空间，因此求sizeof则得到8。</span>即：在32位系统上，对任意指针求sizeof，得到的结果都是4.</p>
+<h2 id="题3"><a href="#题3" class="headerlink" title="题3"></a>题3</h2><p><span style="color: red">C++ 中可以用struct和class来定义类型。这两种类型有什么区别？</span><br>答：如果没有表明成员函数或者成员变量的访问权限级别，<span style="font-weight: bold;">在struct中默认是public，而在class中默认是private。</span></p>
 <h2 id="知识点1"><a href="#知识点1" class="headerlink" title="知识点1"></a>知识点1</h2><p>数据结构：<span style="color: red">数组、字符串、链表、树、栈以及队列</span><br>数组和字符串是最基本的数据结构，<span style="color: red">连续内存</span>分别存储数字和字符。链表和树是面试中出现频率最高的数据结构。<br>数组：占据一块连续的内存并按照顺序存储数据。创建时，<span style="color: red">首先指定数组的容量大小，然后根据大小分配。</span>数组的空间效率不是很好，经常会有空闲的区域没有充分利用。<br>当我们声明一个数组时，其数组的名字也是一个指针，该指针指向数组的第一个元素。可以用一个指针来访问数组。</p>
 
       
@@ -614,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题1"><span class="nav-text">题1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题2"><span class="nav-text">题2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点1"><span class="nav-text">知识点1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题1"><span class="nav-text">题1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题2"><span class="nav-text">题2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题3"><span class="nav-text">题3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点1"><span class="nav-text">知识点1</span></a></li></ol></div>
             
 
           </div>
