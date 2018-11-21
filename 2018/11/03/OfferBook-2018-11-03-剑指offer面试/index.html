@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="题1C++类型转换有四种 题2定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添">
+<meta name="description" content="题1C++类型转换有四种&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在C++基本的数据类型中，可以分为四类：整型(int、short int、long int）、浮点型（float、double、long double）、字符型（char）、布尔型（bool）、空类型（void）。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb">
 <meta name="keywords" content="offer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指offer面试">
 <meta property="og:url" content="http://yoursite.com/2018/11/03/OfferBook-2018-11-03-剑指offer面试/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="题1C++类型转换有四种 题2定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添">
+<meta property="og:description" content="题1C++类型转换有四种&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在C++基本的数据类型中，可以分为四类：整型(int、short int、long int）、浮点型（float、double、long double）、字符型（char）、布尔型（bool）、空类型（void）。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-19T11:50:06.026Z">
+<meta property="og:updated_time" content="2018-11-20T13:46:27.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指offer面试">
-<meta name="twitter:description" content="题1C++类型转换有四种 题2定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？答：1。为什么不是0？答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。如果在该类型中添">
+<meta name="twitter:description" content="题1C++类型转换有四种&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在C++基本的数据类型中，可以分为四类：整型(int、short int、long int）、浮点型（float、double、long double）、字符型（char）、布尔型（bool）、空类型（void）。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb">
 
 
 
@@ -330,8 +330,8 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-11-19T19:50:06+08:00" content="2018-11-19">
-              2018-11-19
+            <time itemprop="dateUpdated" datetime="2018-11-20T21:46:27+08:00" content="2018-11-20">
+              2018-11-20
             </time>
           </span>
         
@@ -406,7 +406,9 @@
       
 
       
-        <h2 id="题1"><a href="#题1" class="headerlink" title="题1"></a>题1</h2><p><span style="color: red">C++类型转换有四种</span></p>
+        <h2 id="题1"><a href="#题1" class="headerlink" title="题1"></a>题1</h2><p><span style="color: red">C++类型转换有四种</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在C++基本的数据类型中，可以分为四类：整型(int、short int、long int）、浮点型（float、double、long double）、字符型（char）、布尔型（bool）、空类型（void）。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在C++语言中新增了四个关键字<span style="color: red">static_cast、const_cast、reinterpret_cast和dynamic_cast</span>。这四个关键字都是用于强制类型转换的。<br>1)static_cast<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在C++语言中static_cast用于数据类型的强制转换，强制将一种数据类型转换为另一种数据类型。例如将整型数据转换为浮点型数据。<br>例1]C语言所采用的类型转换方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">int b = 3;</span><br><span class="line">double result = (double)a / (double)b;</span><br></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例1中将整型变量a和b转换为双精度浮点型，然后相除。在C++语言中，我们可以采用static_cast关键字来进行强制类型转换，如下所示。<br>[例2]static_cast关键字的使用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">int b = 3;</span><br><span class="line">double result = static_cast&lt;double&gt;(a) / static_cast&lt;double&gt;(b);</span><br></pre></td></tr></table></figure></p>
+<p>在本例中同样是将整型变量a转换为双精度浮点型。采用static_cast进行强制数据类型转换时，将想要转换成的数据类型放到尖括号中，将待转换的变量或表达式放在元括号中，其格式可以概括为如下形式：<br>用法：static_cast &lt;类型说明符&gt; （变量或表达式）<br>它主要有如下几种用法：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)用于类层次结构中基类和派生类之间指针或引用的转换进行上行转换（把派生类的指针或引用转换成基类表示）是安全的进行下行转换（把基类的指针或引用转换为派生类表示），由于没有动态类型检查，所以是不安全的<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)用于基本数据类型之间的转换，如把int转换成char。这种转换的安全也要开发人员来保证<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)把空指针转换成目标类型的空指针<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)把任何类型的表达式转换为void类型<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意：static_cast不能转换掉expression的const、volitale或者__unaligned属性。<br>static_cast:可以实现C++中内置基本数据类型之间的相互转换。<br>2) const_cast<br>在C语言中，const限定符通常被用来限定变量，用于表示该变量的值不能被修改。</p>
 <h2 id="题2"><a href="#题2" class="headerlink" title="题2"></a>题2</h2><p><span style="color: red">定义一个空的类型，里面没有任何成员变量和成员函数。对类型求sizeof，得到的结果是什么？</span><br>答：1。<br><span style="color: red">为什么不是0？</span><br>答：空类型的实例中不包含任何信息，本来求sizeof应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual Studio中每个空类型的实例占用1字节的空间。<br><span style="color: red">如果在该类型中添加一个构造函数和析构函数，再对该类型求sizeof，得到的结果又是多少？</span><br>答：和前面一样，还是1.调用构造函数和析构函数只需要知道函数的地址即可，<a id="more"></a>而这些函数的地址只与类型相关，而与类型的实例无关，编译器也不会因为这两个函数而在实例内添加任何额外的信息。<br><span style="color: red">那如果把析构函数标记为虚函数呢？</span><br>答：C++ 的编译器一旦发现一个类型中有虚拟函数，就会为该类型生成虚函数表，并在该类型的每一个实例中添加一个指向虚函数表的指针。<span style="color: blue">在32位的机器上，一个指针占4字节的空间，因此求sizeof得到4；如果是64位的机器，一个指针占8字节的空间，因此求sizeof则得到8。</span>即：在32位系统上，对任意指针求sizeof，得到的结果都是4.</p>
 <h2 id="题3"><a href="#题3" class="headerlink" title="题3"></a>题3</h2><p><span style="color: red">C++ 中可以用struct和class来定义类型。这两种类型有什么区别？</span><br>答：如果没有表明成员函数或者成员变量的访问权限级别，<span style="font-weight: bold;">在struct中默认是public，而在class中默认是private。</span></p>
 <h2 id="知识点1"><a href="#知识点1" class="headerlink" title="知识点1"></a>知识点1</h2><p>数据结构：<span style="color: red">数组、字符串、链表、树、栈以及队列</span><br>数组和字符串是最基本的数据结构，<span style="color: red">连续内存</span>分别存储数字和字符。链表和树是面试中出现频率最高的数据结构。<br>数组：占据一块连续的内存并按照顺序存储数据。创建时，<span style="color: red">首先指定数组的容量大小，然后根据大小分配。</span>数组的空间效率不是很好，经常会有空闲的区域没有充分利用。<br>当我们声明一个数组时，其数组的名字也是一个指针，该指针指向数组的第一个元素。可以用一个指针来访问数组。</p>
@@ -538,7 +540,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
