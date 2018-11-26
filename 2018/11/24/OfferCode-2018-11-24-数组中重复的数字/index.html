@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。可以用数组实现简单的哈希表。数组的名字也是一个指针，该指针指向数组的第一个元素。 题目一在一个长度为n的数组里的所有数字都在0-(n-1)的范围内。数组中某些数字是重复的，找出数组中任意一个重复的数字。例如长度为7的数组{2,3,1,0,2,5,3},对应的输出为2和3。1234">
+<meta name="description" content="数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。可以用数组实现简单的哈希表。数组的名字也是一个指针，该指针指向数组的第一个元素。">
 <meta name="keywords" content="AI,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组中重复的数字">
 <meta property="og:url" content="http://yoursite.com/2018/11/24/OfferCode-2018-11-24-数组中重复的数字/index.html">
 <meta property="og:site_name" content="张凡荣">
-<meta property="og:description" content="数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。可以用数组实现简单的哈希表。数组的名字也是一个指针，该指针指向数组的第一个元素。 题目一在一个长度为n的数组里的所有数字都在0-(n-1)的范围内。数组中某些数字是重复的，找出数组中任意一个重复的数字。例如长度为7的数组{2,3,1,0,2,5,3},对应的输出为2和3。1234">
+<meta property="og:description" content="数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。可以用数组实现简单的哈希表。数组的名字也是一个指针，该指针指向数组的第一个元素。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-24T14:41:11.217Z">
+<meta property="og:updated_time" content="2018-11-26T12:24:25.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组中重复的数字">
-<meta name="twitter:description" content="数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。可以用数组实现简单的哈希表。数组的名字也是一个指针，该指针指向数组的第一个元素。 题目一在一个长度为n的数组里的所有数字都在0-(n-1)的范围内。数组中某些数字是重复的，找出数组中任意一个重复的数字。例如长度为7的数组{2,3,1,0,2,5,3},对应的输出为2和3。1234">
+<meta name="twitter:description" content="数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。可以用数组实现简单的哈希表。数组的名字也是一个指针，该指针指向数组的第一个元素。">
 
 
 
@@ -330,8 +330,8 @@
           
           <span class="post-updated">
             &nbsp; | &nbsp; 更新于
-            <time itemprop="dateUpdated" datetime="2018-11-24T22:41:11+08:00" content="2018-11-24">
-              2018-11-24
+            <time itemprop="dateUpdated" datetime="2018-11-26T20:24:25+08:00" content="2018-11-26">
+              2018-11-26
             </time>
           </span>
         
@@ -407,6 +407,7 @@
 
       
         <p>数组，最简单的一种数据结构，占据一块连续的内存并按照顺序存储数据。创建数组时，首先指定数组的容量大小，根据大小分配内存。<br>可以用数组实现简单的哈希表。<br>数组的名字也是一个指针，该指针指向数组的第一个元素。</p>
+<a id="more"></a>
 <h2 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h2><p>在一个长度为n的数组里的所有数字都在0-(n-1)的范围内。数组中某些数字是重复的，找出数组中任意一个重复的数字。<br>例如长度为7的数组{2,3,1,0,2,5,3},对应的输出为2和3。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	找出数组中重复的数字</span><br><span class="line">	该数组为：长度为n的数组里的所有数字都在0-(n-1)中 </span><br><span class="line">*/</span><br><span class="line"><span class="comment">#include&lt;cstdio&gt;</span></span><br><span class="line"><span class="comment">#include&lt;cstring&gt;</span></span><br><span class="line">const int maxn=101;</span><br><span class="line">int cnt[maxn];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int N,x;</span><br><span class="line">	<span class="keyword">while</span>(scanf(<span class="string">"%d"</span>,&amp;N)==1 &amp;&amp; N)// 数组的个数N </span><br><span class="line">	&#123;</span><br><span class="line">		memset(cnt,0,sizeof(cnt));// 数组赋值为0 </span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(int i=0;i&lt;N;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf(<span class="string">"%d"</span>,&amp;x);// 输入数组中的元素 但x不大于N的值</span><br><span class="line">			cnt[x]++;// 该元素的个数+1 </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(int i=0;i&lt;N;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(cnt[i])// 如果该元素存在 </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(cnt[i]&gt;=2)// 如果该元素的个数重复 </span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"%d "</span>,i);// 输出该元素 </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
